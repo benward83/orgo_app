@@ -22,6 +22,10 @@ const routes = [
     path: '/recipes',
     name: 'Recipes',
   },
+  {
+    path: '/ingredients',
+    name: 'Ingredients',
+  },
 ];
 
 const router = new VueRouter({
