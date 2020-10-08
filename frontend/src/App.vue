@@ -9,12 +9,10 @@
 <style>
 
 .body {
-background: linear-gradient(to bottom,
-rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center,
-rgba(255,255,255,0.40) 0%,
-rgba(0,0,0,0.40) 120%)
-#989898;
-background-blend-mode: multiply,multiply;
+background:#114357;
+background: -webkit-linear-gradient(to right, #F29492, #114357);
+background: linear-gradient(to right, #F29492, #114357);
+
 }
 
 #app {
