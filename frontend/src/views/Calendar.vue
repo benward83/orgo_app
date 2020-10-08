@@ -1,12 +1,14 @@
 <template>
 <div class="calendar">
- <header>
-    <h1>November 2017</h1>
+  <Navbar />
+ <header class="calendar-header">
+   <i class="fa fa-fw fa-chevron-left" @click="subtractMonth"></i>
+            <h4>{{month + ' - ' + year}}</h4>
+            <i class="fa fa-fw fa-chevron-right" @click="addMonth"></i>
   </header>
 
   <ul class="weekdays">
-    <li>
-      <abbr title="S">Sunday</abbr>
+    <li v-for="day in days" :key="day.id">
     </li>
     <li>
       <abbr title="M">Monday</abbr>
@@ -26,9 +28,12 @@
     <li>
       <abbr title="S">Saturday</abbr>
     </li>
+    <li>
+      <abbr title="S">Sunday</abbr>
+    </li>
   </ul>
 
-  <ul class="day-grid">
+  <ul class="day-grid dates">
     <li class="month=prev">29</li>
     <li class="month=prev">30</li>
     <li class="month=prev">31</li>
@@ -70,9 +75,13 @@
 
 <script>
 import * as moment from 'moment/moment';
+import Navbar from '@/components/Navbar.vue';
 
 export default {
   name: 'calendar',
+  components: {
+    Navbar,
+  },
   data() {
     return {
       today: moment(),
@@ -135,7 +144,7 @@ header {
   font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
   justify-content: center;
   margin-bottom: 2em;
-  background: #000;
+  background: rgb(44, 28, 28);
   color: #fff;
   min-height: 10vh;
   text-align: center;
@@ -168,8 +177,8 @@ ul.weekdays li {
 }
 
 ul.day-grid li {
-  background-color: #eaeaea;
-  border: 1px solid #eaeaea;
+  background-color: whitesmoke;
+  border: 1px solid black;
   height: 12vw;
   max-height: 125px;
 }
