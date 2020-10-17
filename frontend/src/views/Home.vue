@@ -47,7 +47,7 @@
 import Header from '@/components/Header.vue';
 
 export default {
-  name: 'Home',
+  name: 'home',
   components: {
     Header,
   },
@@ -62,7 +62,7 @@ export default {
 }
 
 .card {
-   color: whitesmoke
+   color: #E8E8E8
 
 }
 
