@@ -7,7 +7,7 @@
             <li v-for="day in days" :key="day.id"></li>
         </ul>
         <ul class="dates">
-            <li v-for="blank in firstDayOfMonth" :key="blank.id">&nbsp;</li>
+            <li v-for="blank in firstDayOfMonth" :key="blank.id"></li>
             <li v-for="date in daysInMonth" :key="date.id"
             :class="{'current-day': date == initialDate &amp;&amp;
             month == initialMonth && year == initialYear}">;

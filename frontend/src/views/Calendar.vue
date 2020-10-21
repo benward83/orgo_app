@@ -16,7 +16,6 @@ export default {
     Navbar,
     Calendar,
   },
-
 };
 </script>
 

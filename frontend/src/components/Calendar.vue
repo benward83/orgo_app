@@ -1,9 +1,9 @@
 <template>
 <div class="calendar">
  <header class="calendar-header">
-   <i class="fa fa-fw fa-chevron-left" @click="subtractMonth"></i>
+   <i class="fa fa-chevron-left fa-w-10 fa-fw" @click="subtractMonth"></i>
             <h4>{{month + ' - ' + year}}</h4>
-            <i class="fa fa-fw fa-chevron-right" @click="addMonth"></i>
+            <i class="fa fa-chevron-right fa-w-10 fa-fw" @click="addMonth"></i>
   </header>
 
   <ul class="weekdays">
