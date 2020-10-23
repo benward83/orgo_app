@@ -180,6 +180,9 @@ db.on:
 db.seed: db.on
 	docker-compose exec -T dbagent bundle exec rake db:seed[test]
 
+db.flush: db.on
+	docker-compose exec -T dbagent bundle exec rake db:flush[test]
+
 db.empty: db.on
 	docker-compose exec dbagent bundle exec rake db:seed[empty]
 

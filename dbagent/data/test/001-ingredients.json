@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Chicken"
+  },
+  {
+    "id": 2,
+    "name": "Flour"
+  },
+  {
+    "id": 3,
+    "name": "Onion"
+  },
+  {
+    "id": 4,
+    "name": "Garlic"
+  },
+  {
+    "id": 5,
+    "name": "Cucumber"
+  },
+  {
+    "id": 6,
+    "name": "Tomato"
+  },
+  {
+    "id": 7,
+    "name": "Couscous"
+  }
+]
