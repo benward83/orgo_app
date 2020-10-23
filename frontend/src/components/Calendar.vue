@@ -40,47 +40,37 @@ export default {
   },
   computed: {
     year() {
-      const t = this;
-      return t.dateContext.format('Y');
+      return this.dateContext.format('Y');
     },
     month() {
-      const t = this;
-      return t.dateContext.format('MMMM');
+      return this.dateContext.format('MMMM');
     },
     daysInMonth() {
-      const t = this;
-      return t.dateContext.daysInMonth();
+      return this.dateContext.daysInMonth();
     },
     currentDate() {
-      const t = this;
-      return t.dateContext.get('date');
+      return this.dateContext.get('date');
     },
     firstDayOfMonth() {
-      const t = this;
-      const firstDay = moment(t.dateContext).subtract((t.currentDate - 1), 'days');
+      const firstDay = moment(this.dateContext).subtract((this.currentDate - 1), 'days');
       return firstDay.weekday();
     },
     initialDate() {
-      const t = this;
-      return t.today.get('date');
+      return this.today.get('date');
     },
     initialMonth() {
-      const t = this;
-      return t.today.format('MMMM');
+      return this.today.format('MMMM');
     },
     initialYear() {
-      const t = this;
-      return t.today.format('Y');
+      return this.today.format('Y');
     },
   },
   methods: {
     addMonth() {
-      const t = this;
-      t.dateContext = moment(t.dateContext).add(1, 'month');
+      this.dateContext = moment(this.dateContext).add(1, 'month');
     },
     subtractMonth() {
-      const t = this;
-      t.dateContext = moment(t.dateContext).subtract(1, 'month');
+      this.dateContext = moment(this.dateContext).subtract(1, 'month');
     },
   },
 };
