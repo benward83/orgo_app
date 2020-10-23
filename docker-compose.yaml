@@ -1,0 +1,55 @@
+version: '3.6'
+
+services:
+
+  api:
+    depends_on:
+      - postgresql
+    image: orgo/api
+    ports:
+      - 3000:3000
+
+  dbagent:
+    depends_on:
+      - postgresql
+    image: orgo/dbagent
+    volumes:
+      - ./dbagent/data:/home/app/data
+      - ./dbagent/migrations:/home/app/migrations
+      - ./dbagent/schema:/home/app/schema
+    environment:
+      DBAGENT_HOST: postgresql
+      DBAGENT_USER: orgo
+      DBAGENT_PASSWORD: orgo
+      DBAGENT_DB: orgo
+
+  postgresql:
+    image: postgres:12.4
+    volumes:
+      - ./volumes/postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: orgo
+      POSTGRES_USER: orgo
+      POSTGRES_DB: orgo
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - 5432:5432
+
+  frontend:
+    image: orgo/frontend-builder
+    command: npm run serve
+    volumes:
+      - ./frontend/public:/home/app/public
+      - ./frontend/src:/home/app/src
+      - ./frontend/babel.config.js:/home/app/babel.config.js
+      - ./frontend/package.json:/home/app/package.json
+
+  gateway:
+    image: orgo/gateway
+    env_file:
+      ./gateway/env/devel.env
+    ports:
+      - 80:80
+    depends_on:
+      - api
+      - frontend

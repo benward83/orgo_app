@@ -11,6 +11,4 @@ RUN npm install
 
 COPY . .
 
-RUN npm run transpile
-
 CMD ["npm", "run", "start"]

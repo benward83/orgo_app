@@ -1,4 +1,4 @@
-FROM orgo_app/frontend-builder as builder
+FROM orgo/frontend-builder as builder
 
 COPY src/ ./src/
 

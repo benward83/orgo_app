@@ -10,14 +10,12 @@ Dockerfile.pushed
 vendor
 node_modules
 npm-debug.log
-k8s/ci-n-cd/build-job-resourcetpl.yaml
-k8s/ci-n-cd/build-job.yaml
 Dockerfile.*.built
 Dockerfile.*.log
 package-lock.json
 yarn.lock
 Gemfile.lock
-flair-client/coverage
 test-results.*
 rspec.xml
 .DS_Store
+volumes
