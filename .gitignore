@@ -19,3 +19,4 @@ test-results.*
 rspec.xml
 .DS_Store
 volumes
+node_modules
