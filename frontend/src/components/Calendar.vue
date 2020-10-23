@@ -1,83 +1,36 @@
 <template>
-<div class="calendar">
- <header class="calendar-header">
-   <i class="fa fa-chevron-left fa-w-10 fa-fw" @click="subtractMonth"></i>
-            <h4>{{month + ' - ' + year}}</h4>
-            <i class="fa fa-chevron-right fa-w-10 fa-fw" @click="addMonth"></i>
-  </header>
+  <div class="calendar">
+    <div class="calendar-header">
+      <a @click="subtractMonth()">
+        <i class="fa fa-chevron-left fa-fw"></i>
+      </a>
+      <h4>{{month + ' - ' + year}}</h4>
+      <a @click="addMonth()">
+        <i class="fa fa-chevron-right fa-fw"></i>
+      </a>
+    </div>
 
-  <ul class="weekdays">
-    <li v-for="day in days" :key="day.id">
-    </li>
-    <li>
-      <abbr title="M">Monday</abbr>
-    </li>
-    <li>
-      <abbr title="T">Tuesday</abbr>
-    </li>
-    <li>
-      <abbr title="W">Wednesday</abbr>
-    </li>
-    <li>
-      <abbr title="T">Thursday</abbr>
-    </li>
-    <li>
-      <abbr title="F">Friday</abbr>
-    </li>
-    <li>
-      <abbr title="S">Saturday</abbr>
-    </li>
-    <li>
-      <abbr title="S">Sunday</abbr>
-    </li>
-  </ul>
+    <ul class="weekdays">
+        <li v-for="day in days" :key="day.id">
+          {{ day }}
+        </li>
+    </ul>
 
-  <ul class="day-grid dates">
-    <li class="month=prev">29</li>
-    <li class="month=prev">30</li>
-    <li class="month=prev">31</li>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-    <li>6</li>
-    <li>7</li>
-    <li>8</li>
-    <li>9</li>
-    <li>10</li>
-    <li>11</li>
-    <li>12</li>
-    <li>13</li>
-    <li>14</li>
-    <li>15</li>
-    <li>16</li>
-    <li>17</li>
-    <li>18</li>
-    <li>19</li>
-    <li>20</li>
-    <li>21</li>
-    <li>22</li>
-    <li>23</li>
-    <li>24</li>
-    <li>25</li>
-    <li>26</li>
-    <li>27</li>
-    <li>28</li>
-    <li>29</li>
-    <li>30</li>
-    <li class="month-next">1</li>
-    <li class="month-next">2</li>
-  </ul>
-</div>
+    <ul class="day-grid dates">
+      <li v-for="blank in firstDayOfMonth" :key="blank.id"></li>
+      <li v-for="date in daysInMonth" :key="date.id"
+      :class="{'current-day': date == initialDate &&
+      month == initialMonth && year == initialYear}">
+        <span>{{ date }}</span>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 import * as moment from 'moment/moment';
 
 export default {
-  components: {
-  },
   data() {
     return {
       today: moment(),
@@ -102,9 +55,9 @@ export default {
       const t = this;
       return t.dateContext.get('date');
     },
-    firstDayOfTheMonth() {
+    firstDayOfMonth() {
       const t = this;
-      const firstDay = moment(t.dateContext).suntract((t.currentDate - 1), 'days');
+      const firstDay = moment(t.dateContext).subtract((t.currentDate - 1), 'days');
       return firstDay.weekday();
     },
     initialDate() {
@@ -115,7 +68,7 @@ export default {
       const t = this;
       return t.today.format('MMMM');
     },
-    intitialYear() {
+    initialYear() {
       const t = this;
       return t.today.format('Y');
     },
