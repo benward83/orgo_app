@@ -3,7 +3,7 @@ FROM node:10-alpine
 WORKDIR /home/app/
 EXPOSE 3000
 
-RUN apk add bash
+RUN apk add bash && npm install -g supervisor
 
 COPY package*.json ./
 
@@ -11,4 +11,4 @@ RUN npm install
 
 COPY . .
 
-CMD ["npm", "run", "start"]
+CMD ["supervisor", "index.js"]
