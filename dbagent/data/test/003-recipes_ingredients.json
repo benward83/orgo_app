@@ -1,26 +1,50 @@
 [
   {
     "recipe_id": 1,
-    "ingredient_id": 1
+    "ingredient_id": 46
   },
   {
     "recipe_id": 1,
-    "ingredient_id": 3
+    "ingredient_id": 50
   },
   {
     "recipe_id": 2,
-    "ingredient_id": 1
+    "ingredient_id": 45
   },
   {
     "recipe_id": 2,
-    "ingredient_id": 3
+    "ingredient_id": 47
   },
   {
     "recipe_id": 2,
-    "ingredient_id": 4
+    "ingredient_id": 51
   },
   {
     "recipe_id": 2,
-    "ingredient_id": 6
+    "ingredient_id": 14
+  },
+  {
+    "recipe_id": 2,
+    "ingredient_id": 16
+  },
+  {
+    "recipe_id": 2,
+    "ingredient_id": 9
+  },
+  {
+    "recipe_id": 3,
+    "ingredient_id": 49
+  },
+  {
+    "recipe_id": 3,
+    "ingredient_id": 9
+  },
+  {
+    "recipe_id": 3,
+    "ingredient_id": 14
+  },
+  {
+    "recipe_id": 3,
+    "ingredient_id": 52
   }
 ]
