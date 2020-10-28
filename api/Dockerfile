@@ -11,4 +11,4 @@ RUN npm install
 
 COPY . .
 
-CMD ["supervisor", "index.js"]
+CMD ["supervisor", "src/index.js"]

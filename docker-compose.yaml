@@ -10,7 +10,7 @@ services:
       - 3000:3000
     volumes:
       - ./api/package.json:/home/app/package.json
-      - ./api/index.js:/home/app/index.js
+      - ./api/src:/home/app/src
 
   dbagent:
     depends_on:

@@ -2,46 +2,13 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const knex = require('knex');
-
-const ingredientArr = [];
-
-const db = knex({
-  client: 'postgresql',
-  connection: {
-    host: "postgresql",
-    database: 'orgo',
-    user:     'orgo',
-    password: 'orgo'
-  }
-});
-
 const app = express();
 
 app.use(morgan('tiny'));
 app.use(cors());
 app.use(bodyParser.json());
 
-
-app.get('/ingredients', (req, res) => {
-  db.select('name').from('ingredients')
-    .then(result => {
-      res.json(result);
-    })
-    .catch(err => res.send(500, err))
-
-});
-
-app.get('/ingredients/1', (req, res) => {
-  db('ingredient_id')
-  .from('ingredients')
-  .where('id', 1)
-    .then(result => {
-      res.json(result);
-    })
-    .catch(err => res.send(500, err))
-
-});
+app.use('/ingredients', require('./routes/ingredients'));
 
 app.get('/recipes', (req, res) => {
   db.select('name').from('recipes')
