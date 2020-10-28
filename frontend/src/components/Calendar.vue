@@ -1,13 +1,20 @@
 <template>
   <div class="calendar">
     <div class="calendar-header">
-      <a @click="subtractMonth()">
-        <i class="fa fa-chevron-left fa-fw"></i>
-      </a>
+       <br>
       <h4>{{month + ' - ' + year}}</h4>
-      <a @click="addMonth()">
-        <i class="fa fa-chevron-right fa-fw"></i>
+      <p>
+      <a @click="subtractMonth()">
+        <i class="fas fa-angle-double-left"></i>
+      </a> The Past
+      </p>
+
+      <p>The Future
+        <a @click="addMonth()">
+        <i class="fas fa-angle-double-right"></i>
       </a>
+      </p>
+
     </div>
 
     <ul class="weekdays">

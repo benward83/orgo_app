@@ -21,12 +21,12 @@
         <router-link to="/ingredients"><a class="nav-link" href="#">Ingredients</a></router-link>
       </li>
     </ul>
-    <span class="navbar-text">
+    <!-- <span class="navbar-text">
       <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
-    </span>
+    </span> -->
   </div>
 </nav>
 </div>
