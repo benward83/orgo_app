@@ -2,6 +2,8 @@ const express = require('express');
 const db = require('../db');
 const router = express.Router();
 
+
+
 // List all recipes by name and id
 
 router.get('/', (req, res) => {
@@ -27,28 +29,38 @@ router.get('/:id', (req, res) => {
 });
 
 
-// Get full recipe
 
-// router.get('/full_recipe', (req, res) => {
-//   db('full_recipe')
-//   .select('ingredient.id','recipe.id')
-//   .from('recipes_ingredients')
-//   .join('recipes', 'recipes.id', '=', 'ingredients.id')
-//   .where('recipe.id', 2)
-//     .then(result => {
-//       res.json(result);
-//     })
-//     .catch(err => res.send(500, err))
-
-// });
-
-// Add a new Recipe
+// Add a new recipe
 
 router.post('/', (req, res) => {
   const newRecipe = req.body;
-  console.log('new Recipe!');
   res.send('Recipe added!');
 });
 
+
+// Update a recipe
+
+router.patch('/:id', (req, res) => {
+  db('recipe_id')
+  .from('recipes')
+  .where('id', 3)
+  .then(result => {
+      res.json(result);
+    })
+    .catch(err => res.send(500, err))
+});
+
+
+// Delete a recipe
+
+router.delete('/:id', (req, res) => {
+  db('recipe_id')
+  .from('recipes')
+  .where('id', 2)
+  .then(result => {
+      res.json(result);
+    })
+    .catch(err => res.send(500, err))
+});
 
 module.exports = router
