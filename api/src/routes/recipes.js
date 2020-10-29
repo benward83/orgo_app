@@ -3,11 +3,10 @@ const db = require('../db');
 const router = express.Router();
 
 
-
 // List all recipes by name and id
 
 router.get('/', (req, res) => {
-  db.select('name', 'id').from('recipes')
+  db.select('*').from('recipes')
     .then(result => {
       res.json(result);
     })
@@ -19,9 +18,9 @@ router.get('/', (req, res) => {
 // Get a recipe by id
 
 router.get('/:id', (req, res) => {
-  db('recipe_id')
+  db.select('id')
   .from('recipes')
-  .where('id', 3)
+  .where('id', req.params.id)
     .then(result => {
       res.json(result);
     })
@@ -40,23 +39,19 @@ router.post('/', (req, res) => {
 
 // Update a recipe
 
-router.patch('/:id', (req, res) => {
-  db('recipe_id')
+router.patch('/', (req, res) => {
+  db.select('name')
   .from('recipes')
-  .where('id', 3)
-  .then(result => {
-      res.json(result);
-    })
-    .catch(err => res.send(500, err))
+  res.send('The recipe has been updated')
 });
 
 
 // Delete a recipe
 
 router.delete('/:id', (req, res) => {
-  db('recipe_id')
+  db.select('id')
   .from('recipes')
-  .where('id', 2)
+  .where('id', req.params.id)
   .then(result => {
       res.json(result);
     })
