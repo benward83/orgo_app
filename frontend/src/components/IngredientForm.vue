@@ -8,17 +8,18 @@
   <div class="form-group">
     <label for="exampleFormControlInput1">Recipe Name</label>
     <input type="email" class="form-control"
-    id="exampleFormControlInput1" placeholder="A tasty meal is.....">
+    id="exampleFormControlInput1" placeholder="This tasty dish is called.....">
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect2">Add ingredients</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
+    <input class="form-control" type="text" placeholder="Recipe item">
+    <input class="form-control" type="text" placeholder="Recipe item">
+    <input class="form-control" type="text" placeholder="Recipe item">
+    <input class="form-control" type="text" placeholder="Recipe item">
+    <input class="form-control" type="text" placeholder="Recipe item">
+    <input class="form-control" type="text" placeholder="Recipe item">
+    <input class="form-control" type="text" placeholder="Recipe item">
+    <input class="form-control" type="text" placeholder="Recipe item">
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Method (optional)</label>
