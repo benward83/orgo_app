@@ -3,13 +3,12 @@ const db = require('../db');
 const router = express.Router();
 
 
-// Get all ingredients by id
+// Get all ingredients
 
-router.get('/:id', (req, res) => {
+router.get('/', (req, res) => {
   db.select('*')
-  .from('ingredients')
-  .where('id', req.params.id)
-  .then(result => {
+    .from('ingredients')
+    .then(result => {
       res.json(result);
     })
     .catch(err => res.send(500, err))
@@ -18,10 +17,9 @@ router.get('/:id', (req, res) => {
 
 // Get an ingredient with name and id
 
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
   db.select('name', 'id')
     .from('ingredients')
-    .where('id', req.params.id)
     .then(result => {
       res.json(result);
     })
@@ -34,7 +32,13 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const newIngredient = req.body;
-  res.send('Ingredient added!');
+  db('ingredients')
+    .returning(['name', 'id'])
+    .insert(newIngredient)
+    .then(result => {
+      res.json(result);
+    })
+    .catch(err => res.send(500, err))
 });
 
 
@@ -42,10 +46,11 @@ router.post('/', (req, res) => {
 // Delete an ingredient
 
 router.delete('/:id', (req, res) => {
-  db.select('id')
-  .from('ingredients')
-  .where('id', req.params.id)
-  .then(result => {
+  db('ingredients')
+    .returning(['name', 'id'])
+    .where('id', req.params.id)
+    .del()
+    .then(result => {
       res.json(result);
     })
     .catch(err => res.send(500, err))

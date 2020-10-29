@@ -18,7 +18,7 @@
         <router-link to="/recipes"><a class="nav-link" href="#">Recipes</a></router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/ingredients"><a class="nav-link" href="#">Ingredients</a></router-link>
+        <router-link to="/ingredients"><a class="nav-link" href="#">Add Recipes</a></router-link>
       </li>
     </ul>
     <!-- <span class="navbar-text">

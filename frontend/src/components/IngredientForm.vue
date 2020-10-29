@@ -1,6 +1,9 @@
 <template>
   <div class="ingredients">
     <div class="container">
+      <h1>Add your recipe to our list!</h1>
+      <br>
+      <br>
 <form>
   <div class="form-group">
     <label for="exampleFormControlInput1">Recipe Name</label>
@@ -37,6 +40,6 @@ export default {
 <style scoped>
 .container {
 max-width: 1000px;
-padding-top: 10%;
+padding-top: 5%;
 }
 </style>
