@@ -4,10 +4,10 @@
     <div class="card-deck">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">Ingredients</h5>
+          <h5 class="card-title">Larder</h5>
           <img class="card-img-top" src="../assets/Ingredients.jpg">
           <p class="card-text"></p>
-          <router-link to="/ingredients">Ingredients</router-link> |
+          <router-link to="/larder">Larder</router-link> |
 
         </div>
       </div>

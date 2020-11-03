@@ -1,8 +1,7 @@
 <template>
-<div class="ingredients">
+<div class="larder">
 <Navbar />
 <br>
-<IngredientForm />
 
 </div>
 </template>
@@ -10,13 +9,11 @@
 <script>
 
 import Navbar from '@/components/Navbar.vue';
-import IngredientForm from '@/components/IngredientForm.vue';
 
 export default {
-  name: 'ingredients',
+  name: 'larder',
   components: {
     Navbar,
-    IngredientForm,
   },
 
 };

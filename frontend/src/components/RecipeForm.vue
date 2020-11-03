@@ -12,14 +12,14 @@
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect2">Add ingredients</label>
-    <input class="form-control" type="text" placeholder="Recipe item">
-    <input class="form-control" type="text" placeholder="Recipe item">
-    <input class="form-control" type="text" placeholder="Recipe item">
-    <input class="form-control" type="text" placeholder="Recipe item">
-    <input class="form-control" type="text" placeholder="Recipe item">
-    <input class="form-control" type="text" placeholder="Recipe item">
-    <input class="form-control" type="text" placeholder="Recipe item">
-    <input class="form-control" type="text" placeholder="Recipe item">
+    <input class="form-control" type="text" placeholder="Item">
+    <input class="form-control" type="text" placeholder="Item">
+    <input class="form-control" type="text" placeholder="Item">
+    <input class="form-control" type="text" placeholder="Item">
+    <input class="form-control" type="text" placeholder="Item">
+    <input class="form-control" type="text" placeholder="Item">
+    <input class="form-control" type="text" placeholder="Item">
+    <input class="form-control" type="text" placeholder="Item">
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Method (optional)</label>

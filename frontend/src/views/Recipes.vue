@@ -2,18 +2,20 @@
   <div id="recipes">
     <Navbar />
     <br>
-    <h1>This is the Recipes page</h1>
+    <RecipeForm />
   </div>
 </template>
 
 <script>
 
 import Navbar from '@/components/Navbar.vue';
+import RecipeForm from '@/components/RecipeForm.vue';
 
 export default {
   name: 'recipes',
   components: {
     Navbar,
+    RecipeForm,
   },
 
 };

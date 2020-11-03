@@ -25,7 +25,7 @@ router.get('/:id', (req, res) => {
     .then(result => {
       res.json(result);
     })
-    .catch(err => res.send(500, err))
+    .catch(err => res.send(500, err));
 });
 
 
