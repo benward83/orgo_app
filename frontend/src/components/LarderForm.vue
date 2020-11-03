@@ -3,19 +3,19 @@
   <div id="text-holder">
   <h1>What's in your Larder?</h1>
   <br>
-  <p>Please pop a few ingrediants in and we'll recommend some tasty dishes to cook up!</p>
+  <p>Please pop a few ingredients in and we'll recommend some tasty dishes to cook up!</p>
   </div>
 <form>
   <div class="form-group">
     <br>
-    <input class="form-control" type="text" placeholder="Item">
-    <input class="form-control" type="text" placeholder="Item">
-    <input class="form-control" type="text" placeholder="Item">
-    <input class="form-control" type="text" placeholder="Item">
-    <input class="form-control" type="text" placeholder="Item">
-    <input class="form-control" type="text" placeholder="Item">
-    <input class="form-control" type="text" placeholder="Item">
-    <input class="form-control" type="text" placeholder="Item">
+    <input class="form-control" type="text">
+    <input class="form-control" type="text">
+    <input class="form-control" type="text">
+    <input class="form-control" type="text">
+    <input class="form-control" type="text">
+    <input class="form-control" type="text">
+    <input class="form-control" type="text">
+    <input class="form-control" type="text">
   </div>
      <b-button pill variant="success">Submit</b-button>
 </form>
@@ -29,7 +29,6 @@
 <style lang="scss" scoped>
 .larderForm {
 max-width: 1000px;
-padding-top: 5%;
 display: block;
 margin: auto;
 width: 50%;

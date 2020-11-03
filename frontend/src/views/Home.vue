@@ -65,7 +65,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
 .card-deck {
   margin-bottom: 30px;

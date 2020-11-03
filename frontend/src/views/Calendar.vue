@@ -1,6 +1,8 @@
 <template>
   <div id='calendar'>
     <Navbar />
+    <CalendarHeader />
+    <br>
     <Calendar />
   </div>
 </template>
@@ -9,12 +11,14 @@
 
 import Navbar from '@/components/Navbar.vue';
 import Calendar from '@/components/Calendar.vue';
+import CalendarHeader from '@/components/CalendarHeader.vue';
 
 export default {
   name: 'calendar',
   components: {
     Navbar,
     Calendar,
+    CalendarHeader,
   },
 };
 </script>
