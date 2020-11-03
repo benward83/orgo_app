@@ -11,6 +11,6 @@
 
 <style>
 .jumbotron {
-background-image: url('../assets/Cookbook.jpg')
+background-image: url('../assets/Cookbook-min.jpg')
 }
 </style>
