@@ -25,7 +25,7 @@
     <label for="exampleFormControlTextarea1">Method (optional)</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     <br>
-    <button type="button" class="btn btn-primary">SUBMIT</button>
+  <b-button pill variant="success">Submit</b-button>
   </div>
 </form>
     </div>
@@ -42,5 +42,8 @@ export default {
 .container {
 max-width: 1000px;
 padding-top: 5%;
+display: block;
+margin: auto;
+width: 50%;
 }
 </style>
