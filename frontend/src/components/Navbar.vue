@@ -1,12 +1,11 @@
 <template>
 <div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Orgo App</a>
+   <router-link to="/" class="navbar-brand" href="#">Orgo App
+        <span class="sr-only">(current)</span></router-link>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <router-link to="/" class="nav-link" href="#">Home
-        <span class="sr-only">(current)</span></router-link>
       </li>
       <li class="nav-item">
         <router-link to="/calendar"><a class="nav-link" href="#">Calendar</a></router-link>
@@ -18,7 +17,7 @@
         <router-link to="/recipes"><a class="nav-link" href="#">Recipes</a></router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/larder"><a class="nav-link" href="#">Larder</a></router-link>
+        <router-link to="/"><a class="nav-link" href="#">Larder</a></router-link>
       </li>
     </ul>
     <!-- <span class="navbar-text">

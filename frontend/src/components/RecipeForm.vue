@@ -12,6 +12,9 @@
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect2">Add ingredients</label>
+   <b-row>
+    <b-col>
+    <label for="exampleFormControlSelect2">Item</label>
     <input class="form-control" type="text" placeholder="Item">
     <input class="form-control" type="text" placeholder="Item">
     <input class="form-control" type="text" placeholder="Item">
@@ -19,7 +22,30 @@
     <input class="form-control" type="text" placeholder="Item">
     <input class="form-control" type="text" placeholder="Item">
     <input class="form-control" type="text" placeholder="Item">
-    <input class="form-control" type="text" placeholder="Item">
+    </b-col>
+
+    <b-col cols="12" md="auto">
+    <label for="exampleFormControlSelect2">Quantity</label>
+    <input class="form-control" type="text" placeholder="">
+    <input class="form-control" type="text" placeholder="">
+    <input class="form-control" type="text" placeholder="">
+    <input class="form-control" type="text" placeholder="">
+    <input class="form-control" type="text" placeholder="">
+    <input class="form-control" type="text" placeholder="">
+    <input class="form-control" type="text" placeholder="">
+    </b-col>
+    <b-col col lg="2">
+      <label for="exampleFormControlSelect2">Weight/Value</label>
+        <input class="form-control" type="text" placeholder="">
+    <input class="form-control" type="text" placeholder="">
+    <input class="form-control" type="text" placeholder="">
+    <input class="form-control" type="text" placeholder="">
+    <input class="form-control" type="text" placeholder="">
+    <input class="form-control" type="text" placeholder="">
+    <input class="form-control" type="text" placeholder="">
+    </b-col>
+  </b-row>
+
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Method (optional)</label>
