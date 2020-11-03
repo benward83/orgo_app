@@ -9,8 +9,9 @@
 
 <style scoped>
 .jumbotron {
-background-image: url('../assets/calendar-image-min.jpg');
-background-position: bottom;
+background-image: url('../assets/calendar-image.jpg');
+background-position: center;
+background-size: 100%;
 min-height: 300px
 }
 </style>

@@ -9,9 +9,13 @@
 <style>
 
 .body {
-background:#114357;
+/* background:#114357;
 background: -webkit-linear-gradient(to right, #F29492, #114357);
-background: linear-gradient(to right, #F29492, #114357);
+background: linear-gradient(to right, #F29492, #114357); */
+
+background: rgb(240,235,223);
+background: linear-gradient(90deg, rgba(240,235,223,1) 0%,
+ rgba(78,78,78,0.7105217086834734) 100%);
 
 }
 

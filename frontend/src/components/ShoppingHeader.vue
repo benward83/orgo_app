@@ -11,6 +11,7 @@
 .jumbotron {
 background-image: url('../assets/shopping-list-image-min.jpg');
 background-position: center;
+background-size: 100%;
 min-height: 300px
 }
 </style>

@@ -33,6 +33,11 @@ const routes = [
     name: 'Shopping',
     component: () => import('../views/Shopping.vue'),
   },
+  {
+    path: '/addrecipe',
+    name: 'AddRecipe',
+    component: () => import('../views/AddRecipe.vue'),
+  },
 ];
 
 const router = new VueRouter({
