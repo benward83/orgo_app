@@ -11,6 +11,8 @@
 
 <style>
 .jumbotron {
-background-image: url('../assets/Cookbook-min.jpg');
+background-image: url('../assets/cover3.jpg');
+background-position: center;
+min-height: 300px
 }
 </style>
