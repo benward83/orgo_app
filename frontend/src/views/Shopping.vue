@@ -1,5 +1,5 @@
 <template>
-  <div class="shopping">
+  <div id="shopping">
     <Navbar />
     <ShoppingHeader />
     <br>

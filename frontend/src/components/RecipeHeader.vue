@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="recipe-header">
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
       </div>

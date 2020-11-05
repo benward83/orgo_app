@@ -5,11 +5,13 @@
       <input type="text" placeholder="Add New Item">
 
           <ul>
-              <li><span><i class="fa fa-trash"></i></span> Bon Preu</li>
-              <li><span><i class="fa fa-trash"></i></span> Casa Amattler</li>
-              <li><span><i class="fa fa-trash"></i></span> Veritas</li>
-              <li><span><i class="fa fa-trash"></i></span> Turris</li>
-              <li><span><i class="fa fa-trash"></i></span> Mercado</li>
+              <li><span><i class="fa fa-trash"></i></span> Chorizo</li>
+              <li><span><i class="fa fa-trash"></i></span> Onions</li>
+              <li><span><i class="fa fa-trash"></i></span> Chicken</li>
+              <li><span><i class="fa fa-trash"></i></span> Rice</li>
+              <li><span><i class="fa fa-trash"></i></span> Chilli</li>
+              <li><span><i class="fa fa-trash"></i></span> Garlic</li>
+              <li><span><i class="fa fa-trash"></i></span> Tomatoes</li>
           </ul>
     </div>
   </div>

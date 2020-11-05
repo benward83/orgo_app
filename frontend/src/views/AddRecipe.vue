@@ -1,5 +1,5 @@
 <template>
-  <div id="recipes">
+  <div id="addRecipe">
     <Navbar />
     <RecipeHeader />
     <br>

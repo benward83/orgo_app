@@ -1,5 +1,5 @@
 <template>
-  <div class="ingredients">
+  <div class="recipe-form">
     <div class="container">
       <h1>Add your recipe to our list!</h1>
       <br>

@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div id="home">
     <Header />
     <div class="card-deck">
       <div class="card" style="width: 18rem;">

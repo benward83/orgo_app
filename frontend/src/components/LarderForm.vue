@@ -1,5 +1,5 @@
 <template>
-<div class="larderForm">
+<div class="larder-form">
   <div id="text-holder">
   <h1>What's in your Larder?</h1>
   <br>

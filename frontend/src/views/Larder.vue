@@ -1,5 +1,5 @@
 <template>
-<div class="larder">
+<div id="larder">
 <Navbar />
 <br>
 <LarderHeader />

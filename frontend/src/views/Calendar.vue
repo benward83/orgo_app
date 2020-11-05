@@ -3,22 +3,22 @@
     <Navbar />
     <CalendarHeader />
     <br>
-    <Calendar />
+    <VueCalendar />
   </div>
 </template>
 
 <script>
 
 import Navbar from '@/components/Navbar.vue';
-import Calendar from '@/components/Calendar.vue';
+import VueCalendar from '@/components/VueCalendar.vue';
 import CalendarHeader from '@/components/CalendarHeader.vue';
 
 export default {
   name: 'calendar',
   components: {
     Navbar,
-    Calendar,
     CalendarHeader,
+    VueCalendar,
   },
 };
 </script>
