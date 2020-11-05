@@ -27,7 +27,7 @@
 </script>
 
 <style lang="scss" scoped>
-.larderForm {
+.larder-form {
 max-width: 1000px;
 display: block;
 margin: auto;

@@ -1,17 +1,13 @@
 <template>
   <div class="shopping">
     <div id="container">
-      <h1>Shopping List <span id="toggle-form"><i class="fa fa-plus"></i></span></h1>
-      <input type="text" placeholder="Add New Item">
-
+      <h1>Shopping List <span @click="ingredients.push('spices')" id="toggle-form">
+          <i class="fa fa-plus" ></i></span>
+        </h1>
+            <input type="text" placeholder="Add New Item">
           <ul>
-              <li><span><i class="fa fa-trash"></i></span> Chorizo</li>
-              <li><span><i class="fa fa-trash"></i></span> Onions</li>
-              <li><span><i class="fa fa-trash"></i></span> Chicken</li>
-              <li><span><i class="fa fa-trash"></i></span> Rice</li>
-              <li><span><i class="fa fa-trash"></i></span> Chilli</li>
-              <li><span><i class="fa fa-trash"></i></span> Garlic</li>
-              <li><span><i class="fa fa-trash"></i></span> Tomatoes</li>
+            <li v-for="(ingredient) in ingredients" :key="ingredient"><span>
+            <i class="fa fa-trash"></i></span>{{ ingredient }}</li>
           </ul>
     </div>
   </div>
@@ -20,11 +16,10 @@
 <script>
 
 export default {
-  components: {
-
-  },
-  methods: {
-
+  data() {
+    return {
+      ingredients: ['Chorizo', 'Onions', 'Chicken', 'Rice', 'Chilli', 'Garlic', 'Tomatoes'],
+    };
   },
 };
 </script>

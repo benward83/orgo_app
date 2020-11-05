@@ -36,7 +36,7 @@
     </b-col>
     <b-col col lg="2">
       <label for="exampleFormControlSelect2">Weight/Value</label>
-        <input class="form-control" type="text" placeholder="">
+    <input class="form-control" type="text" placeholder="">
     <input class="form-control" type="text" placeholder="">
     <input class="form-control" type="text" placeholder="">
     <input class="form-control" type="text" placeholder="">
@@ -51,7 +51,7 @@
     <label for="exampleFormControlTextarea1">Method (optional)</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     <br>
-  <b-button pill variant="success">Submit</b-button>
+  <b-button pill variant="outline-secondary">Submit</b-button>
   </div>
 </form>
     </div>

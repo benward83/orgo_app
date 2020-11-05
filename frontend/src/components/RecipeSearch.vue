@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 
-.recipeSearch {
+.recipe-search {
 max-width: 750px;
 display: block;
 margin: auto;
