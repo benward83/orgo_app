@@ -1,27 +1,49 @@
 <template>
+    <!-- :class="{'bought':ingredient.bought}"> -->
   <div class="shopping">
     <div id="container">
-      <h1>Shopping List <span @click="ingredients.push('spices')" id="toggle-form">
+      <h1>Shopping List <span @click="addItem" id="toggle-form">
           <i class="fa fa-plus" ></i></span>
         </h1>
             <input type="text" placeholder="Add New Item">
           <ul>
-            <li v-for="(ingredient) in ingredients" :key="ingredient"><span>
-            <i class="fa fa-trash"></i></span>{{ ingredient }}</li>
+            <li v-for="(ingredient) in ingredients" :key="ingredient.id"><span @click="deleteItem" >
+            <i class="fa fa-trash" ></i></span>{{ ingredient.name }}</li>
           </ul>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
 
 export default {
   data() {
     return {
-      ingredients: ['Chorizo', 'Onions', 'Chicken', 'Rice', 'Chilli', 'Garlic', 'Tomatoes'],
+      ingredients: [],
     };
   },
+  methods: {
+    addItem() {
+      // axios.post('http://localhost:3000/ingredients', {
+      //   ingredient: ingredient
+      // })
+      // .then(res => this.ingredients = [...this.ingredients, res.data]);
+
+    },
+    // deleteItem(id) {
+    //   axios.delete(`http://localhost:3000/ingredients/${id}`)
+    //     .then((res) => this.ingredients = this.ingredients
+    //       .filter((ingredient) => ingredient.id !== id));
+    // .catch((err) => console.log('err'));
+  },
+  // },
+  created() {
+    axios.get('http://localhost:3000/ingredients')
+      .then(((res) => { this.ingredients = res.data; }));
+  },
 };
+
 </script>
 
 <style scoped>
@@ -107,7 +129,7 @@ input:focus {
     box-shadow: 0 0 3px rgba(0,0,0 0.1)ß
 }
 
-.completed {
+.bought {
     color: gray;
     text-decoration: line-through;
 }

@@ -1,4 +1,5 @@
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+import axios from 'axios';
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
@@ -9,6 +10,7 @@ Vue.use(require('moment'));
 
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
+Vue.prototype.$axios = axios;
 
 Vue.config.productionTip = false;
 
