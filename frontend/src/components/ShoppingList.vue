@@ -1,13 +1,13 @@
 <template>
-    <!-- :class="{'bought':ingredient.bought}"> -->
   <div class="shopping">
     <div id="container">
       <h1>Shopping List <span @click="addItem" id="toggle-form">
           <i class="fa fa-plus" ></i></span>
         </h1>
-            <input type="text" placeholder="Add New Item">
+            <input type="text" v-model="name" name="name" placeholder="Add New Item">
           <ul>
-            <li v-for="(ingredient) in ingredients" :key="ingredient.id"><span @click="deleteItem" >
+            <li v-for="(ingredient) in ingredients" :key="ingredient.id"><span
+            @click="deleteItem" >
             <i class="fa fa-trash" ></i></span>{{ ingredient.name }}</li>
           </ul>
     </div>
@@ -21,23 +21,30 @@ export default {
   data() {
     return {
       ingredients: [],
+      name: '',
+      id: '',
     };
   },
   methods: {
-    addItem() {
-      // axios.post('http://localhost:3000/ingredients', {
-      //   ingredient: ingredient
-      // })
-      // .then(res => this.ingredients = [...this.ingredients, res.data]);
+    addItem(newIngredient) {
+      const { name, id } = newIngredient;
 
+      axios.post('http://localhost:3000/ingredients', {
+        name,
+        id,
+      })
+        .then((res) => { this.ingredients = [...this.ingredients, res.data]; })
+        .catch((err) => console.log(err));
     },
-    // deleteItem(id) {
-    //   axios.delete(`http://localhost:3000/ingredients/${id}`)
-    //     .then((res) => this.ingredients = this.ingredients
-    //       .filter((ingredient) => ingredient.id !== id));
-    // .catch((err) => console.log('err'));
+    deleteItem(id) {
+      axios.delete(`http://localhost:3000/ingredients${id}`)
+        .then(() => {
+          this.ingredients = this.ingredients
+            .filter((ingredient) => ingredient.id !== id);
+        })
+        .catch((err) => console.log(err));
+    },
   },
-  // },
   created() {
     axios.get('http://localhost:3000/ingredients')
       .then(((res) => { this.ingredients = res.data; }));
