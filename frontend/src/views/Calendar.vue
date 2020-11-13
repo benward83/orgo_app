@@ -3,14 +3,14 @@
     <Navbar />
     <CalendarHeader />
     <br>
-    <VueCalendar />
+    <Calendar />
   </div>
 </template>
 
 <script>
 
 import Navbar from '@/components/Navbar.vue';
-import VueCalendar from '@/components/VueCalendar.vue';
+import Calendar from '@/components/Calendar.vue';
 import CalendarHeader from '@/components/CalendarHeader.vue';
 
 export default {
@@ -18,7 +18,7 @@ export default {
   components: {
     Navbar,
     CalendarHeader,
-    VueCalendar,
+    Calendar,
   },
 };
 </script>

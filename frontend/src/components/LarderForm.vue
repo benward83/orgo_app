@@ -17,7 +17,7 @@
     <input class="form-control" type="text">
     <input class="form-control" type="text">
   </div>
-     <b-button pill variant="success">Submit</b-button>
+     <b-button pill variant="info">Submit</b-button>
 </form>
 </div>
 </template>

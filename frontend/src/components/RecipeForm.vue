@@ -51,7 +51,7 @@
     <label for="exampleFormControlTextarea1">Method (optional)</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     <br>
-  <b-button pill variant="outline-secondary">Submit</b-button>
+  <b-button pill variant="info">Submit</b-button>
   </div>
 </form>
     </div>
