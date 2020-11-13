@@ -8,7 +8,7 @@
           <p class="card-text">
           </p>
           <br>
-          <b-button class="buttons" pill variant="info">Button</b-button>
+           <calendar-modal id="1" />
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -18,7 +18,7 @@
           <p class="card-text">
           </p>
           <br>
-            <b-button class="buttons" pill variant="info">Button</b-button>
+           <calendar-modal id="2" />
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -28,7 +28,7 @@
           <p class="card-text">
           </p>
           <br>
-            <b-button class="buttons" pill variant="info">Button</b-button>
+           <calendar-modal id="3"/>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -38,7 +38,7 @@
          <p class="card-text">
           </p>
           <br>
-            <b-button class="buttons" pill variant="info">Button</b-button>
+           <calendar-modal id="4"/>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -48,7 +48,7 @@
          <p class="card-text">
           </p>
           <br>
-         <b-button class="buttons" pill variant="info">Button</b-button>
+           <calendar-modal id="5"/>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -58,7 +58,7 @@
          <p class="card-text">
           </p>
           <br>
-           <b-button class="buttons" pill variant="info">Button</b-button>
+           <calendar-modal id="6"/>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -68,7 +68,7 @@
          <p class="card-text">
           </p>
           <br>
-          <b-button class="buttons" pill variant="info">Button</b-button>
+          <calendar-modal id="7"/>
         </div>
       </div>
     </div>
@@ -76,12 +76,18 @@
 </template>
 
 <script>
+import CalendarModal from './CalendarModal.vue';
+
 export default {
+  components: {
+    CalendarModal,
+  },
 };
 </script>
 
 <style scoped>
-.card-deck {
+.card-de
+CalendarModalck {
   margin-bottom: 30px;
 }
 
