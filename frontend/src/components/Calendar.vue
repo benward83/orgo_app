@@ -8,8 +8,7 @@
           <p class="card-text">
           </p>
           <br>
-           <calendar-modal id="1" />
-        </div>
+          <CalendarModal />        </div>
       </div>
       <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -18,8 +17,7 @@
           <p class="card-text">
           </p>
           <br>
-           <calendar-modal id="2" />
-        </div>
+       </div>
       </div>
       <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -28,7 +26,6 @@
           <p class="card-text">
           </p>
           <br>
-           <calendar-modal id="3"/>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -38,8 +35,7 @@
          <p class="card-text">
           </p>
           <br>
-           <calendar-modal id="4"/>
-        </div>
+       </div>
       </div>
       <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -48,8 +44,7 @@
          <p class="card-text">
           </p>
           <br>
-           <calendar-modal id="5"/>
-        </div>
+       </div>
       </div>
       <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -58,8 +53,7 @@
          <p class="card-text">
           </p>
           <br>
-           <calendar-modal id="6"/>
-        </div>
+       </div>
       </div>
       <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -68,26 +62,40 @@
          <p class="card-text">
           </p>
           <br>
-          <calendar-modal id="7"/>
-        </div>
+       </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import CalendarModal from './CalendarModal.vue';
+
+import CalendarModal from '@/components/CalendarModal.vue';
 
 export default {
+  data() {
+    return {
+      days: [
+        { id: 1, name: 'mon' },
+        { id: 2, name: 'tue' },
+        { id: 3, name: 'wed' },
+        { id: 4, name: 'thu' },
+        { id: 5, name: 'fri' },
+        { id: 6, name: 'sat' },
+        { id: 7, name: 'sun' },
+      ],
+    };
+  },
   components: {
     CalendarModal,
+
   },
+
 };
 </script>
 
 <style scoped>
-.card-de
-CalendarModalck {
+.card-deck {
   margin-bottom: 30px;
 }
 
