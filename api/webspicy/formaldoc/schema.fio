@@ -1,4 +1,0 @@
-@import finitio/data
-@import jsonapi/resources
-
-@import opengraph/resources

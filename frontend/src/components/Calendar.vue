@@ -1,68 +1,15 @@
 <template>
   <div class="calendar">
-    <div class="card-deck">
+    <div class="card-deck" v-for='day in days' :key='day.id' >
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-           <span class="week-text"><i>Monday</i></span>
-          <img class="card-img-top" src="../assets/days_images/monday.jpg">
-          <p class="card-text">
+           <span class="week-text"><i>{{ day.name }}</i></span>
+            <img :src="day.img" class="card-img-top" >
+              <p class="card-text">
+              <br>
+            <b-button pill variant="info">Click to go to {{ day.name }}'s plan</b-button>
           </p>
-          <br>
-          <CalendarModal />        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-           <span class="week-text"><i>Tuesday</i></span>
-          <img class="card-img-top" src="../assets/days_images/tuesday.jpg">
-          <p class="card-text">
-          </p>
-          <br>
-       </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-           <span class="week-text"><i>Wednesday</i></span>
-          <img class="card-img-top" src="../assets/days_images/wednesday.jpg">
-          <p class="card-text">
-          </p>
-          <br>
         </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-           <span class="week-text"><i>Thursday</i></span>
-          <img class="card-img-top" src="../assets/days_images/thursday.jpg">
-         <p class="card-text">
-          </p>
-          <br>
-       </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-           <span class="week-text"><i>Friday</i></span>
-          <img class="card-img-top" src="../assets/days_images/friday.jpg">
-         <p class="card-text">
-          </p>
-          <br>
-       </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-           <span class="week-text"><i>Saturday</i></span>
-          <img class="card-img-top" src="../assets/days_images/saturday.jpg">
-         <p class="card-text">
-          </p>
-          <br>
-       </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-           <span class="week-text"><i>Sunday</i></span>
-          <img class="card-img-top" src="../assets/days_images/sunday.jpg">
-         <p class="card-text">
-          </p>
-          <br>
-       </div>
       </div>
     </div>
   </div>
@@ -70,27 +17,22 @@
 
 <script>
 
-import CalendarModal from '@/components/CalendarModal.vue';
-
 export default {
+  components: {
+  },
   data() {
     return {
       days: [
-        { id: 1, name: 'mon' },
-        { id: 2, name: 'tue' },
-        { id: 3, name: 'wed' },
-        { id: 4, name: 'thu' },
-        { id: 5, name: 'fri' },
-        { id: 6, name: 'sat' },
-        { id: 7, name: 'sun' },
+        { id: 1, name: 'Monday', img: '../assets/days_images/monday.jpg' },
+        { id: 2, name: 'Tuesday', img: '../assets/days_images/tuesday.jpg' },
+        { id: 3, name: 'Wednesday', img: '../assets/days_images/wednesday.jpg' },
+        { id: 4, name: 'Thursday', img: '../assets/days_images/thursday.jpg' },
+        { id: 5, name: 'Friday', img: '../assets/days_images/friday.jpg' },
+        { id: 7, name: 'Saturday', img: '../assets/days_images/saturday.jpg' },
+        { id: 6, name: 'Sunday', img: '../assets/days_images/sunday.jpg' },
       ],
     };
   },
-  components: {
-    CalendarModal,
-
-  },
-
 };
 </script>
 

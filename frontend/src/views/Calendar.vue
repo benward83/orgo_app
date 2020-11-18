@@ -1,9 +1,11 @@
 <template>
   <div id='calendar'>
-    <Navbar />
-    <CalendarHeader />
+      <Navbar />
+      <CalendarHeader />
     <br>
-    <Calendar />
+    <div>
+      <Calendar  />
+    </div>
   </div>
 </template>
 
@@ -20,6 +22,7 @@ export default {
     CalendarHeader,
     Calendar,
   },
+  props: ['days'],
 };
 </script>
 

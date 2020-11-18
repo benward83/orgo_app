@@ -4,70 +4,69 @@
       <h1>Add your recipe to our list!</h1>
       <br>
       <br>
-<form>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Recipe Name</label>
-    <input type="email" class="form-control"
-    id="exampleFormControlInput1" placeholder="This tasty dish is called.....">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect2">Add ingredients</label>
-   <b-row>
-    <b-col>
-    <label for="exampleFormControlSelect2">Item</label>
-    <input class="form-control" type="text" placeholder="Item">
-    <input class="form-control" type="text" placeholder="Item">
-    <input class="form-control" type="text" placeholder="Item">
-    <input class="form-control" type="text" placeholder="Item">
-    <input class="form-control" type="text" placeholder="Item">
-    <input class="form-control" type="text" placeholder="Item">
-    <input class="form-control" type="text" placeholder="Item">
-    </b-col>
-
-    <b-col cols="12" md="auto">
-    <label for="exampleFormControlSelect2">Quantity</label>
-    <input class="form-control" type="text" placeholder="">
-    <input class="form-control" type="text" placeholder="">
-    <input class="form-control" type="text" placeholder="">
-    <input class="form-control" type="text" placeholder="">
-    <input class="form-control" type="text" placeholder="">
-    <input class="form-control" type="text" placeholder="">
-    <input class="form-control" type="text" placeholder="">
-    </b-col>
-    <b-col col lg="2">
-      <label for="exampleFormControlSelect2">Weight/Value</label>
-    <input class="form-control" type="text" placeholder="">
-    <input class="form-control" type="text" placeholder="">
-    <input class="form-control" type="text" placeholder="">
-    <input class="form-control" type="text" placeholder="">
-    <input class="form-control" type="text" placeholder="">
-    <input class="form-control" type="text" placeholder="">
-    <input class="form-control" type="text" placeholder="">
-    </b-col>
-  </b-row>
-
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Method (optional)</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    <br>
-  <b-button pill variant="info">Submit</b-button>
-  </div>
-</form>
+      <form @submit.prevent="submitForm">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Recipe name</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Your recipe name"
+              v-model="recipeName">
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Ingredients</label>
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="10"
+              v-model="recipeIngredients"  >
+            </textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Method</label>
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+            >
+            </textarea>
+          </div>
+          <b-button pill variant="info" @click="addRecipe">Button</b-button>
+      </form>
     </div>
   </div>
 </template>
 
 <script>
-export default {
 
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      recipeName: '',
+      recipeIngredients: [],
+    };
+  },
+  methods: {
+    addRecipe(newRecipe) {
+      const { name, id } = newRecipe;
+
+      axios.post('http://localhost:3000/recipes', {
+        name,
+        id,
+      })
+        .then((res) => { this.ingredients = [...this.ingredients, res.data]; })
+        .catch((err) => console.log(err));
+    },
+  },
 };
 </script>
 
 <style scoped>
 .container {
 max-width: 1000px;
-/* padding-top: 5%; */
 display: block;
 margin: auto;
 width: 50%;

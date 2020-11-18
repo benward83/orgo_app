@@ -1,6 +1,6 @@
 SHELL=/bin/bash -o pipefail
-COMPONENTS := api frontend dbagent gateway webspicy
-UP_COMPONENTS := gateway dbagent webspicy
+COMPONENTS := api frontend dbagent gateway
+UP_COMPONENTS := gateway dbagent
 
 ################################################################################
 ### Config variables
@@ -215,5 +215,5 @@ frontend/Dockerfile.builder.built: frontend/Dockerfile.builder frontend/package.
 	docker build frontend ${frontend_BUILD_ARGS} -t orgo/frontend-builder -f frontend/Dockerfile.builder | tee frontend/Dockerfile.builder.log
 	touch frontend/Dockerfile.builder.built
 
-api.test: webspicy.on
-	docker-compose exec -T webspicy bundle exec rake test
+# api.test: webspicy.on
+# 	docker-compose exec -T webspicy bundle exec rake test

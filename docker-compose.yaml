@@ -38,14 +38,14 @@ services:
     ports:
       - 5432:5432
 
-  webspicy:
-      image: orgo/webspicy
-      env_file:
-        ./webspicy/env/devel.env
-      volumes:
-      - ./webspicy/Rakefile:/home/app/Rakefile
-      - ./webspicy/formaldoc:/home/app/formaldoc
-      - ./webspicy/domain:/home/app/domain
+  # webspicy:
+  #     image: orgo/webspicy
+  #     env_file:
+  #       ./webspicy/env/devel.env
+  #     volumes:
+  #     - ./webspicy/Rakefile:/home/app/Rakefile
+  #     - ./webspicy/formaldoc:/home/app/formaldoc
+  #     - ./webspicy/domain:/home/app/domain
 
   frontend:
     image: orgo/frontend-builder
