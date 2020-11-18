@@ -20,6 +20,8 @@ export default {
     RecipeForm,
     RecipeHeader,
   },
+  methods: {
+  },
 };
 </script>
 

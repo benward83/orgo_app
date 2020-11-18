@@ -26,14 +26,6 @@ export default {
     };
   },
   methods: {
-    // deleteItem(id) {
-    //   axios.delete(`http://localhost:3000/ingredients${id}`)
-    //     .then(() => {
-    //       this.ingredients = this.ingredients
-    //         .filter((ingredient) => ingredient.id !== id);
-    //     })
-    //     .catch((err) => console.log(err));
-    // },
   },
   created() {
     axios.get('http://localhost:3000/ingredients')

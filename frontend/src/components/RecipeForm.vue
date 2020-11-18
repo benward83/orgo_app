@@ -4,7 +4,7 @@
       <h1>Add your recipe to our list!</h1>
       <br>
       <br>
-      <form @submit.prevent="submitForm">
+      <form >
           <div class="form-group">
             <label for="exampleFormControlInput1">Recipe name</label>
             <input
@@ -51,13 +51,14 @@ export default {
   },
   methods: {
     addRecipe(newRecipe) {
-      const { name, id } = newRecipe;
-
+      const { name, ingredients } = newRecipe;
       axios.post('http://localhost:3000/recipes', {
         name,
-        id,
+        ingredients,
       })
-        .then((res) => { this.ingredients = [...this.ingredients, res.data]; })
+        .then((res) => {
+          res.json(res);
+        })
         .catch((err) => console.log(err));
     },
   },
