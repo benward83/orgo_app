@@ -8,28 +8,17 @@
           <div class="form-group">
             <label for="exampleFormControlInput1">Recipe name</label>
             <input
-              type="email"
+              type="text"
               class="form-control"
-              id="exampleFormControlInput1"
               placeholder="Your recipe name"
-              v-model="recipeName">
+              v-model="recipe.name">
           </div>
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Ingredients</label>
+            <label>Description</label>
             <textarea
               class="form-control"
-              id="exampleFormControlTextarea1"
-              rows="10"
-              v-model="recipeIngredients"
-              >
-            </textarea>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">Method</label>
-            <textarea
-              class="form-control"
-              id="exampleFormControlTextarea1"
               rows="3"
+              v-model="recipe.description"
               >
             </textarea>
           </div>
@@ -46,21 +35,14 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      recipeName: '',
-      recipeIngredients: [],
+      recipe: {},
     };
   },
   methods: {
-    addRecipe(newRecipe) {
-      const { name, ingredients } = newRecipe;
-      axios.post('http://localhost:3000/recipes', {
-        name,
-        ingredients,
-      })
-        .then((res) => {
-          res.json(res);
-        })
-        .catch((err) => console.log(err));
+    addRecipe() {
+      axios.post('http://localhost:3000/recipes', this.recipe)
+        .then((res) => console.log(res))
+        .catch((res) => console.error(res));
     },
   },
 };

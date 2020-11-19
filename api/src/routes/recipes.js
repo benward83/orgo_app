@@ -12,15 +12,14 @@ router.get('/', (req, res) => {
       res.json(result);
     })
     .catch(err => res.send(500, err))
-
 });
 
 
 // Get a recipe by name and id
 
 router.get('/:id', (req, res) => {
-  db.select('name','id')
-    .from('recipes')
+  db.select('*')
+  .from('recipes')
     .where('id', req.params.id)
     .then(result => {
       res.json(result);
@@ -34,8 +33,8 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   const newRecipe = req.body;
-  db('ingredients')
-    .returning(['name', 'id'])
+  db('recipes')
+    .returning(['*'])
     .insert(newRecipe)
     .then(result => {
       res.json(result);
@@ -47,11 +46,11 @@ router.post('/', (req, res) => {
 // Update a recipe
 
 router.patch('/:id', (req, res) => {
-  const patchIngredient = req.body;
+  const patchRecipe = req.body;
   db('recipes')
-    .returning(['name', 'id'])
+    .returning(['*'])
     .where('id', req.params.id)
-    .update(patchIngredient)
+    .update(patchRecipe)
     .then(result => {
       res.json(result);
     })
@@ -63,7 +62,7 @@ router.patch('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   db('recipes')
-  .returning(['name', 'id'])
+  .returning(['*'])
   .where('id', req.params.id)
   .del()
   .then(result => {
