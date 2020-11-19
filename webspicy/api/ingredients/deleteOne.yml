@@ -1,0 +1,44 @@
+---
+name: |-
+  Deletes an Ingredient
+
+url: |-
+  /ingredients/{id}
+
+services:
+- method: |-
+    DELETE
+
+  description: |-
+    Delete an existing ingredient
+
+  input_schema: |-
+    {
+      id: ID
+    }
+
+  output_schema: |-
+    Ingredient
+
+  error_schema: |-
+    Error
+
+  examples:
+
+    - description: |-
+        when requested
+      params:
+        id: 1
+      expected:
+        content_type: application/json
+        status: 200
+
+  counterexamples:
+
+    - description: |-
+        when requested for an unexisting ingredient
+      params:
+        id: 56789765
+      expected:
+        content_type: application/json
+        status: 404

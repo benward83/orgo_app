@@ -1,0 +1,12 @@
+@import finitio/data
+
+Error = {
+  error : String
+}
+
+ID = Integer
+
+Ingredient = {
+  id           : ID
+  name         : String
+}

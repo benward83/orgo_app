@@ -1,0 +1,36 @@
+---
+name: |-
+  Get All Ingredients
+
+url: |-
+  /ingredients/
+
+services:
+- method: |-
+    GET
+
+  description: |-
+    Returns the list of ingredients
+
+  input_schema: |-
+    {
+    }
+
+  output_schema: |-
+    [Ingredient]
+
+  error_schema: |-
+    Error
+
+  examples:
+
+    - description: |-
+        when requested
+      params: {}
+      expected:
+        content_type: application/json
+        status: 200
+      assert:
+        - notEmpty
+
+  counterexamples: []

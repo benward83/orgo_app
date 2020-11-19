@@ -1,0 +1,34 @@
+---
+name: |-
+  Creates an Ingredient
+
+url: |-
+  /ingredients/
+
+services:
+- method: |-
+    POST
+
+  description: |-
+    Creates a new ingredient
+
+  input_schema: |-
+    {
+      name: String
+    }
+
+  output_schema: |-
+    Ingredient
+
+  error_schema: |-
+    Error
+
+  examples:
+
+    - description: |-
+        when requested
+      params:
+        name: Sweet potato
+      expected:
+        content_type: application/json
+        status: 200

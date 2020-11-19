@@ -1,0 +1,47 @@
+---
+name: |-
+  Updates an Ingredient
+
+url: |-
+  /ingredients/{id}
+
+services:
+- method: |-
+    PATCH
+
+  description: |-
+    Update an existing ingredient
+
+  input_schema: |-
+    {
+      id: ID
+      name: String
+    }
+
+  output_schema: |-
+    Ingredient
+
+  error_schema: |-
+    Error
+
+  examples:
+
+    - description: |-
+        when requested
+      params:
+        id: 1
+        name: Asparaguses
+      expected:
+        content_type: application/json
+        status: 200
+
+  counterexamples:
+
+    - description: |-
+        when requested for an unexisting ingredient
+      params:
+        id: 56789765
+        name: Asparaguses
+      expected:
+        content_type: application/json
+        status: 404

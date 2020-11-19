@@ -12,6 +12,17 @@ services:
       - ./api/package.json:/home/app/package.json
       - ./api/src:/home/app/src
 
+  webspicy:
+    depends_on:
+      - api
+    environment:
+      LOG_LEVEL: DEBUG
+    image: orgo/webspicy
+    volumes:
+      - ./webspicy/config.rb:/webspicy/config.rb
+      - ./webspicy/schema.fio:/webspicy/schema.fio
+      - ./webspicy/api:/webspicy/api
+
   dbagent:
     depends_on:
       - postgresql
