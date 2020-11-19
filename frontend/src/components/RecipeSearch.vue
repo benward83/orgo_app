@@ -11,7 +11,7 @@
   <br>
     <div class="card">
     <ul>
-      <li v-for="recipe in recipes" :key="recipe.id"><span
+      <li v-for="recipe in matchingRepices" :key="recipe.id"><span
       >
       </span>{{ recipe.name }}</li>
     </ul>
@@ -28,6 +28,14 @@ export default {
       name: '',
       recipes: [],
     };
+  },
+  computed: {
+    matchingRepices() {
+      if (!this.name) {
+        return this.recipes;
+      }
+      return this.recipes.filter((r) => r.name.indexOf(this.name) >= 0);
+    },
   },
   methods: {
   },

@@ -115,7 +115,8 @@ input:focus {
     width: 500px;
     margin: 150px auto;
     background: #f7f7f7;
-    box-shadow: 0 0 3px rgba(0,0,0 0.1)ß
+    box-shadow: 0 0 3px rgba(0,0,0 0.1);
+    border-color: 3px solid #2980b9
 }
 
 .bought {

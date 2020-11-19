@@ -1,5 +1,5 @@
 <template>
-  <div class="calndar-header">
+  <div class="calendar-header">
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
       </div>

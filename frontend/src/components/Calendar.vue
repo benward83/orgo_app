@@ -2,6 +2,7 @@
   <div class="calendar">
     <h1>Plan your weekly meals here</h1>
     <br>
+    <br>
     <div class="card-deck" v-for='day in days' :key='day.id' >
       <div class="card" style="width: 15rem;">
         <div class="card-body">
@@ -42,7 +43,7 @@ export default {
 }
 .card-body {
   background-color: rgb(240,235,223);
-background: linear-gradient(90deg, rgba(240,235,223,1) 0%,
+  background: linear-gradient(180deg, rgba(240,235,223,1) 30%,
  rgba(78,78,78,0.7105217086834734) 100%);
 }
 
