@@ -14,6 +14,7 @@
 background-image: url('../assets/cover3-min.jpg');
 background-position: center;
 background-size: 100%;
-min-height: 300px
+min-height: 300px;
+
 }
 </style>

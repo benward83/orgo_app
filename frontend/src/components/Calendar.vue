@@ -1,7 +1,9 @@
 <template>
   <div class="calendar">
+    <h1>Plan your weekly meals here</h1>
+    <br>
     <div class="card-deck" v-for='day in days' :key='day.id' >
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 15rem;">
         <div class="card-body">
            <span class="week-text"><i>{{ day.name }}</i></span>
             <img :src="day.img" class="card-img-top" >
@@ -18,32 +20,30 @@
 <script>
 
 export default {
-  components: {
-  },
-  data() {
-    return {
-      days: [
-        { id: 1, name: 'Monday', img: '../assets/days_images/monday.jpg' },
-        { id: 2, name: 'Tuesday', img: '../assets/days_images/tuesday.jpg' },
-        { id: 3, name: 'Wednesday', img: '../assets/days_images/wednesday.jpg' },
-        { id: 4, name: 'Thursday', img: '../assets/days_images/thursday.jpg' },
-        { id: 5, name: 'Friday', img: '../assets/days_images/friday.jpg' },
-        { id: 7, name: 'Saturday', img: '../assets/days_images/saturday.jpg' },
-        { id: 6, name: 'Sunday', img: '../assets/days_images/sunday.jpg' },
-      ],
-    };
-  },
+  props: ['days'],
 };
 </script>
 
 <style scoped>
+
+.calendar {
+    width: 750px;
+    margin: auto auto;
+    box-shadow: 0 0 3px rgba(0,0,0 0.1)ß
+}
+
 .card-deck {
   margin-bottom: 30px;
+
 }
 
 .card {
-   color: #cec6c6
-
+   border-color: #2980b9;
+}
+.card-body {
+  background-color: rgb(240,235,223);
+background: linear-gradient(90deg, rgba(240,235,223,1) 0%,
+ rgba(78,78,78,0.7105217086834734) 100%);
 }
 
 .card-title {
@@ -65,14 +65,7 @@ export default {
 
 .card-img-top {
     width: 100%;
-    height: 15vw;
-    object-fit: cover;
-}
-
-.link {
-  color: black;
-}
-.link:hover {
-   color: #00F
+    height: 300px;
+    object-fit: contain;
 }
 </style>

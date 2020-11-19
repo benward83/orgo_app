@@ -73,7 +73,8 @@
 }
 
 .card {
-   color: #cec6c6
+   color: #cec6c6;
+   border-color: #2980b9;
 
 }
 
@@ -99,6 +100,6 @@
   color: black;
 }
 .link:hover {
-   color: #00F
+   color: #2980b9
 }
 </style>

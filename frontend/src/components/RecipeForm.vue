@@ -20,7 +20,8 @@
               class="form-control"
               id="exampleFormControlTextarea1"
               rows="10"
-              v-model="recipeIngredients"  >
+              v-model="recipeIngredients"
+              >
             </textarea>
           </div>
           <div class="form-group">
@@ -29,7 +30,7 @@
               class="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
-            >
+              >
             </textarea>
           </div>
           <b-button pill variant="info" @click="addRecipe">Button</b-button>

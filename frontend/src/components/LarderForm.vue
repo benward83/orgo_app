@@ -6,17 +6,17 @@
   <p>Please pop a few ingredients in and we'll recommend some tasty dishes to cook up!</p>
   </div>
 <form>
-  <div class="form-group">
     <br>
-    <input class="form-control" type="text">
-    <input class="form-control" type="text">
-    <input class="form-control" type="text">
-    <input class="form-control" type="text">
-    <input class="form-control" type="text">
-    <input class="form-control" type="text">
-    <input class="form-control" type="text">
-    <input class="form-control" type="text">
-  </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1"></label>
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="10"
+          v-model="recipeIngredients"
+          >
+        </textarea>
+      </div>
      <b-button pill variant="info">Submit</b-button>
 </form>
 </div>
@@ -38,5 +38,10 @@ width: 50%;
 display: block;
 margin: auto;
 width: 50%;
+}
+
+.form-group {
+   color: #cec6c6;
+   border-color: #2980b9;
 }
 </style>
