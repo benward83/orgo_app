@@ -3,21 +3,21 @@
     <Navbar />
     <RecipeHeader />
     <br>
-    <RecipeForm />
+    <AddRecipeForm />
   </div>
 </template>
 
 <script>
 
 import Navbar from '@/components/Navbar.vue';
-import RecipeForm from '@/components/RecipeForm.vue';
+import AddRecipeForm from '@/components/AddRecipeForm.vue';
 import RecipeHeader from '@/components/RecipeHeader.vue';
 
 export default {
   name: 'add-recipe',
   components: {
     Navbar,
-    RecipeForm,
+    AddRecipeForm,
     RecipeHeader,
   },
   methods: {

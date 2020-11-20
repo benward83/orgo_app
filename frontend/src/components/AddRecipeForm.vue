@@ -1,5 +1,5 @@
 <template>
-  <div class="recipe-form">
+  <div class="add-recipe-form">
     <div class="container">
       <h1>Add your recipe to our list!</h1>
       <br>
@@ -12,6 +12,7 @@
               class="form-control"
               placeholder="Your recipe name"
               v-model="recipe.name">
+              <AddRecipeTags />
           </div>
           <div class="form-group">
             <label>Description</label>
@@ -30,9 +31,14 @@
 
 <script>
 
+import AddRecipeTags from '@/components/AddRecipeTags.vue';
+
 import axios from 'axios';
 
 export default {
+  components: {
+    AddRecipeTags,
+  },
   data() {
     return {
       recipe: {},

@@ -27,6 +27,10 @@ Add Recipe
 
 # Build page to add more details to the recipe inputs
 
+Larder
+
+# Add items to a visible list when added to the search bar
+
 
 
 •Backend•
