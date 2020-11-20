@@ -10,3 +10,10 @@ Ingredient = {
   id           : ID
   name         : String
 }
+
+
+Recipe = {
+  id           : ID
+  name         : String
+  description  : String | Nil
+}

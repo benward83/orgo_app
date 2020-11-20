@@ -1,16 +1,16 @@
 ---
 name: |-
-  Gets one Ingredient
+  Get one Recipe
 
 url: |-
-  /ingredients/{id}
+  /recipes/{id}
 
 services:
 - method: |-
     GET
 
   description: |-
-    Returns a single ingredient
+    Returns a single recipe
 
   input_schema: |-
     {
@@ -18,7 +18,7 @@ services:
     }
 
   output_schema: |-
-    Ingredient
+    Recipe
 
   error_schema: |-
     Error
@@ -35,9 +35,9 @@ services:
 
   counterexamples:
     - description: |-
-        when requested for a non-existent ingredient
+        when requested for a non-existent recipe
       params:
-        id: 16656789
+        id: 45678765
       expected:
         content_type: application/json
         status: 404

@@ -1,16 +1,16 @@
 ---
 name: |-
-  Get All Ingredients
+  Get All Recipes
 
 url: |-
-  /ingredients/
+  /recipes/
 
 services:
 - method: |-
     GET
 
   description: |-
-    Returns the list of ingredients
+    Returns the list of recipes
 
   input_schema: |-
     {
@@ -18,7 +18,7 @@ services:
     }
 
   output_schema: |-
-    [Ingredient]
+    [Recipe]
 
   error_schema: |-
     Error

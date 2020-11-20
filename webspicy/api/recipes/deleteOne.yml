@@ -1,16 +1,16 @@
 ---
 name: |-
-  Gets one Ingredient
+  Deletes a Recipe
 
 url: |-
-  /ingredients/{id}
+  /recipes/{id}
 
 services:
 - method: |-
-    GET
+    DELETE
 
   description: |-
-    Returns a single ingredient
+    Deletes an existing recipe
 
   input_schema: |-
     {
@@ -18,7 +18,7 @@ services:
     }
 
   output_schema: |-
-    Ingredient
+    Recipe
 
   error_schema: |-
     Error
@@ -34,10 +34,11 @@ services:
         status: 200
 
   counterexamples:
+
     - description: |-
-        when requested for a non-existent ingredient
+        when requested for non-existent recipe
       params:
-        id: 16656789
+        id: 346543
       expected:
         content_type: application/json
         status: 404

@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 });
 
 
-// Get an ingredient with name and id
+// Get an ingredient by id
 
 router.get('/:id', (req, res) => {
   db.select('*')

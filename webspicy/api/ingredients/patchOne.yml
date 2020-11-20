@@ -38,7 +38,7 @@ services:
   counterexamples:
 
     - description: |-
-        when requested for an unexisting ingredient
+        when requested for a non-existent ingredient
       params:
         id: 56789765
         name: Asparaguses

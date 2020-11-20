@@ -1,24 +1,25 @@
 ---
 name: |-
-  Gets one Ingredient
+  Updates a Recipe
 
 url: |-
-  /ingredients/{id}
+  /recipes/{id}
 
 services:
 - method: |-
-    GET
+    PATCH
 
   description: |-
-    Returns a single ingredient
+    Update an existing recipe
 
   input_schema: |-
     {
       id: ID
+      name: String
     }
 
   output_schema: |-
-    Ingredient
+    Recipe
 
   error_schema: |-
     Error
@@ -29,15 +30,18 @@ services:
         when requested
       params:
         id: 1
+        name: Chixen Curry
       expected:
         content_type: application/json
         status: 200
 
   counterexamples:
+
     - description: |-
         when requested for a non-existent ingredient
       params:
-        id: 16656789
+        id: 457654
+        name: Chixen Curry
       expected:
         content_type: application/json
         status: 404

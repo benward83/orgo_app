@@ -36,7 +36,7 @@ services:
   counterexamples:
 
     - description: |-
-        when requested for an unexisting ingredient
+        when requested for an non-existent ingredient
       params:
         id: 56789765
       expected:

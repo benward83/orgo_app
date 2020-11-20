@@ -1,24 +1,24 @@
 ---
 name: |-
-  Get All Ingredients
+  Creates a Recipe
 
 url: |-
-  /ingredients/
+  /recipes/
 
 services:
 - method: |-
-    GET
+    POST
 
   description: |-
-    Returns the list of ingredients
+    Creates a new recipe
 
   input_schema: |-
     {
-
+      name: String
     }
 
   output_schema: |-
-    [Ingredient]
+    Recipe
 
   error_schema: |-
     Error
@@ -27,11 +27,8 @@ services:
 
     - description: |-
         when requested
-      params: {}
+      params:
+        name: Jerk Chicken
       expected:
         content_type: application/json
         status: 200
-      assert:
-        - notEmpty
-
-  counterexamples: []

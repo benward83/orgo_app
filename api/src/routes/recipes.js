@@ -15,14 +15,17 @@ router.get('/', (req, res) => {
 });
 
 
-// Get a recipe by name and id
+// Get a recipe by id
 
 router.get('/:id', (req, res) => {
   db.select('*')
   .from('recipes')
     .where('id', req.params.id)
     .then(result => {
-      res.json(result);
+      if (result.length) {
+        return res.json(result[0]);
+      }
+      res.json(404, { error: 'Recipe not found' });
     })
     .catch(err => res.send(500, err));
 });
@@ -37,7 +40,7 @@ router.post('/', (req, res) => {
     .returning(['*'])
     .insert(newRecipe)
     .then(result => {
-      res.json(result);
+      return res.json(result[0]);
     })
     .catch(err => res.send(500, err))
 });
@@ -52,7 +55,10 @@ router.patch('/:id', (req, res) => {
     .where('id', req.params.id)
     .update(patchRecipe)
     .then(result => {
-      res.json(result);
+      if (result.length) {
+        return res.json(result[0]);
+      }
+      return res.json(404, { error: 'Recipe not found' });
     })
     .catch(err => res.send(500, err))
 });
@@ -66,8 +72,11 @@ router.delete('/:id', (req, res) => {
   .where('id', req.params.id)
   .del()
   .then(result => {
-      res.json(result);
-    })
+    if (result.length) {
+      return res.json(result[0]);
+    }
+    return res.json(404, { error: 'Recipe not found' });
+  })
     .catch(err => res.send(500, err))
 });
 

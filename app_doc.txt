@@ -1,0 +1,36 @@
+20/11/20
+
+General
+
+# Minify pics so the app has better functionality
+# Add click functionality on the cards on home page instead of merely relying on the a tag
+
+
+•Frontend•
+
+
+Calender
+
+# Add modals for each Calender day and add button functionality
+# Rearrange cars so they are side by side instead of on top of one another
+
+
+Shopping List
+
+# Remove ingredients from DB call at 'created()' and begin adding ability to add to list from recipe page
+
+Recipes
+
+# Add filter system to the search bar so we can search the db by ingredient/key word
+
+Add Recipe
+
+# Build page to add more details to the recipe inputs
+
+
+
+•Backend•
+
+# Test Api using webspicy to ensure all current tests pass
+# Migrate db adding more details to the queries.
+
