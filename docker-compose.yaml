@@ -11,6 +11,7 @@ services:
     volumes:
       - ./api/package.json:/home/app/package.json
       - ./api/src:/home/app/src
+      - ./api/tests:/home/app/tests
 
   webspicy:
     depends_on:

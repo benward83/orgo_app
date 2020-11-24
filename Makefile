@@ -217,3 +217,6 @@ frontend/Dockerfile.builder.built: frontend/Dockerfile.builder frontend/package.
 
 api.test: webspicy.on
 	docker-compose run -T webspicy webspicy config.rb
+
+api.tdd: api.on
+	docker-compose exec -T api npm run test:watch
