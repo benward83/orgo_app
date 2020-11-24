@@ -1,15 +1,12 @@
 <template>
   <div>
-
-    <b-button pill variant="info" @click="$bvModal.show('modal-scoped')">Go to daily plan</b-button>
-
-    <b-modal id="modal-scoped">
+    <b-modal class="modal-scoped" :id="day.id">
       <template #modal-header="{ close }">
         <!-- Emulate built in modal header close button action -->
         <b-button size="sm" variant="outline-danger" @click="close()">
-          Close weekday
+          Close {{ day.name }}
         </b-button>
-        <h5>Monday</h5>
+        <h5>{{ day.name }}</h5>
       </template>
 
       <template>

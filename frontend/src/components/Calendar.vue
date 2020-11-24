@@ -1,5 +1,6 @@
 <template>
   <div class="calendar">
+     <CalendarModal />
     <h1>Plan your weekly meals here</h1>
     <br>
     <br>
@@ -10,7 +11,13 @@
             <img :src="day.img" class="card-img-top" >
               <p class="card-text">
               <br>
-            <b-button pill variant="info">Click to go to {{ day.name }}'s plan</b-button>
+            <b-button
+            pill variant="info"
+            @click="$bvModal.show('modal-scoped')"
+            :v-b-modal="day.id"
+            >
+            Click to go to {{ day.name }}'s plan
+            </b-button>
           </p>
         </div>
       </div>
@@ -20,7 +27,12 @@
 
 <script>
 
+import CalendarModal from '@/components/CalendarModal.vue';
+
 export default {
+  components: {
+    CalendarModal,
+  },
   props: ['days'],
 };
 </script>
