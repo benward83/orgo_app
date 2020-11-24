@@ -11,4 +11,4 @@ RUN npm install
 
 COPY . .
 
-CMD ["supervisor", "src/index.js"]
+CMD ["supervisor", "--", "-r", "@babel/register", "src/index.js"]
