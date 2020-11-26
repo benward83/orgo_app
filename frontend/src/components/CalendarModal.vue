@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-modal class="modal-scoped" :id="day.id">
+    <b-modal class="modal-scoped">
       <template #modal-header="{ close }">
         <!-- Emulate built in modal header close button action -->
         <b-button size="sm" variant="outline-danger" @click="close()">

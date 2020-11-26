@@ -14,7 +14,7 @@
             <b-button
             pill variant="info"
             @click="$bvModal.show('modal-scoped')"
-            :v-b-modal="day.id"
+
             >
             Click to go to {{ day.name }}'s plan
             </b-button>
