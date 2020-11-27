@@ -4,10 +4,13 @@ export default (array) => {
   }
   const uniqArray = [];
   for (let i = 0; i < array.length; i++) {
-    if (!uniqArray.includes(array[i])) {
-      uniqArray.push(array[i]);
-      uniqArray.sort((a, b) => a - b);
+    const value = array[i];
+    if (typeof value != 'number') {
+      continue;
+    }
+    if (!uniqArray.includes(value)) {
+      uniqArray.push(value);
     }
   }
-  return uniqArray;
+  return uniqArray.sort((a, b) => a - b);
 };

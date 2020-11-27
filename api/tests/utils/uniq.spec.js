@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import uniq from '../../src/utils/uniq';
 
-describe.only('uniq', () => {
+describe('uniq', () => {
   it('is a function', () => {
     expect(uniq).to.be.an.instanceof(Function);
   });
