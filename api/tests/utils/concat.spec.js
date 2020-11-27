@@ -3,7 +3,7 @@ import concat from '../../src/utils/concat';
 
 // It is a function which takes 2 arrays as arguments and returns a concat of both of them
 
-describe.only('concat', () => {
+describe('concat', () => {
   it('is a function', () => {
     expect(concat).to.be.an.instanceof(Function);
   });
