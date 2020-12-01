@@ -8,7 +8,7 @@ import count from '../../src/utils/count';
   * @example count(['foo', 'foo', 'bar]) === { foo: 2, bar: 1 }
   **/
 
-describe('count', () => {
+describe.only('count', () => {
   it('is a function', () => {
     expect(count).to.be.an.instanceof(Function);
   });
