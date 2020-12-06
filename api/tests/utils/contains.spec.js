@@ -33,7 +33,7 @@ describe('contains', () => {
     expect(contains([undefined], undefined)).to.equal(true);
     expect(contains([1, 2, 3, undefined], undefined)).to.equal(true);
   });
-  it('returns false if value is found', () => {
+  it('returns false if value is not found', () => {
     expect(contains([2], 1)).to.equal(false);
     expect(contains([1, 2, 3, 4, 5], 6)).to.equal(false);
   });

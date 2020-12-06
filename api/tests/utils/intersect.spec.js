@@ -12,7 +12,7 @@ describe('intersect', () => {
   it('is a function', () => {
     expect(intersect).to.be.an.instanceof(Function);
   });
-  it('expects two arrays as paramters', () => {
+  it('expects two arrays as parameters', () => {
     const test = (a, b) => () => intersect(a, b);
     // Incorrect usage
     expect(test(null, null)).to.throw(/Array expected, got/);
@@ -31,6 +31,6 @@ describe('intersect', () => {
   });
 
   it('returns the intersection of both arrays', () => {
-    expect(intersect([1, 2, 3], [2, 3, 4])).to.deep.equal([2, 3]);
+    expect(intersect([1, 2, 3], [2, 3, 4, 3])).to.deep.equal([2, 3]);
   });
 });
