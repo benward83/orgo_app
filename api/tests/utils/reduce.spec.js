@@ -9,7 +9,7 @@ import reduce from '../../src/utils/reduce';
   * @returns the last accumulator value
   **/
 
-describe.only('reduce', () => {
+describe('reduce', () => {
   it('is a function', () => {
     expect(reduce).to.be.an.instanceof(Function);
   });

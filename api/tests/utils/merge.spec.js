@@ -9,7 +9,7 @@ import merge from '../../src/utils/merge';
   *   in case of duplicate keys, right takes precedence
   **/
 
-describe('merge', () => {
+describe.only('merge', () => {
   it('is a function', () => {
     expect(merge).to.be.an.instanceof(Function);
   });
