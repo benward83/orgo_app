@@ -27,15 +27,3 @@
 </nav>
 </div>
 </template>
-
-<style scoped>
-.navbar {
-  top: 0;
-  z-index: 100;
-  position: fixed;
-  width: 100%;
-  color: slategrey;
-  border-bottom: 1px solid #2980b9;
-}
-
-</style>

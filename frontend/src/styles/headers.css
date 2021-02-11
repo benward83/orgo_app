@@ -1,0 +1,38 @@
+
+
+/* Main Header  */
+
+.jumbotron {
+  background-image: url('../assets/cover3-min.jpg');
+  background-position: center;
+  background-size: 100%;
+  min-height: 300px;
+  }
+
+  /* Calendar Header  */
+
+  .jumbotron {
+    background-image: url('../assets/calendar-image.jpg');
+    background-position: center;
+    background-size: 100%;
+    min-height: 300px
+    }
+
+
+  /* Recipe Header  */
+
+  .jumbotron {
+    background-image: url('../assets/recipe-image-min.jpg');
+    background-position: center;
+    background-size: 100%;
+    min-height: 300px
+    }
+
+    /* Larder Header  */
+
+  .jumbotron {
+    background-image: url('../assets/larder-image-min.jpg');
+    background-position: center;
+    background-size: 100%;
+    min-height: 300px
+    }

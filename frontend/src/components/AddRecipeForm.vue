@@ -53,13 +53,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.container {
-max-width: 1000px;
-display: block;
-margin: auto;
-width: 50%;
-}
-
-</style>

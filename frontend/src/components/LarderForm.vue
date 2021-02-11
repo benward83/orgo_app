@@ -12,7 +12,7 @@
     type="text"
     v-model="name"
     name="name"
-    placeholder="Enter ingredients....">
+    placeholder="Enter ingredient....">
   <br>
   <br>
   <b-button pill variant="info">Find me a recipe</b-button>
@@ -31,23 +31,3 @@
 <script>
 
 </script>
-
-<style lang="scss" scoped>
-.larder-form {
-max-width: 1000px;
-display: block;
-margin: auto;
-width: 50%;
-}
-
-#text-holder {
-display: block;
-margin: auto;
-width: 50%;
-}
-
-.form-group {
-   color: #cec6c6;
-   border-color: #2980b9;
-}
-</style>
