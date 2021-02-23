@@ -33,7 +33,7 @@
 
 import AddRecipeTags from '@/components/AddRecipeTags.vue';
 
-import axios from 'axios';
+// import axios from 'axios';
 
 export default {
   components: {
@@ -45,11 +45,20 @@ export default {
     };
   },
   methods: {
-    addRecipe() {
-      axios.post('http://localhost:3000/recipes', this.recipe)
-        .then((res) => console.log(res))
-        .catch((res) => console.error(res));
-    },
+    // addRecipe() {
+    //   axios.post('http://localhost:3000/recipes', this.recipe)
+    //     .then((res) => console.log(res))
+    //     .catch((res) => console.error(res));
+    // },
   },
 };
 </script>
+
+<style scoped>
+  .container {
+    max-width: 1000px;
+    display: block;
+    margin: auto;
+    width: 50%;
+    }
+</style>

@@ -31,3 +31,25 @@
 <script>
 
 </script>
+
+<style scoped>
+   .larder-form {
+    max-width: 1000px;
+    display: block;
+    margin: auto;
+    width: 50%;
+    border-color: #2980b9;
+    }
+
+    #text-holder {
+    display: block;
+    margin: auto;
+    width: 50%;
+
+    }
+
+    .form-group {
+       color: #cec6c6;
+       border-color: #2980b9;
+    }
+</style>
