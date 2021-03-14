@@ -4,7 +4,7 @@
   position: fixed;
   width: 100%;
   color: slategrey;
-  border-bottom: 1px solid #2980b9;
+  border-bottom: 1px solid #6F0055;
 }
 
 
@@ -14,7 +14,7 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #6F0055;
 }
 
 #nav a.router-link-exact-active {

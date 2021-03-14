@@ -1,7 +1,9 @@
+@import "./buttons.css";
 @import "./card.css";
 @import "./containers.css";
-@import "./h1.css";
+@import "./forms.css";
 @import "./navbar.css";
 @import "./recipe.css";
 @import "./shopping.css";
+@import "./text.css";
 @import "./views.css";

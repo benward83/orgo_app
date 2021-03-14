@@ -1,0 +1,14 @@
+.larder-form {
+  width: 1750px;
+  border-radius: 15px 15px 15px 15px;
+  display: block;
+  margin: auto;
+  width: 50%;
+  border-color: #6F0055;
+  }
+
+  #larder-text-holder {
+  display: block;
+  margin: auto;
+  width: 70%;
+  }

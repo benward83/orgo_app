@@ -129,7 +129,7 @@
 <script>
 
 export default {
-  name: 'AddRecordForm',
+  name: 'AddRecipeForm',
   components: {},
   data() {
     return {

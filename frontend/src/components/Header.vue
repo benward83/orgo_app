@@ -17,13 +17,4 @@
   min-height: 300px;
   }
 
-  .jumboContainer .jumboHeaderText {
-    max-width: 1000px;
-    border-radius: 18px 18px 18px 18px;
-    display: block;
-    margin: auto;
-    width: 50%;
-
-  }
-
 </style>

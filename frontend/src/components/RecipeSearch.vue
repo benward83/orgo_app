@@ -1,12 +1,10 @@
 <template>
 <div class="recipe-search">
-  <h1 id="recipe-h1">Search for...</h1>
-  <br>
-  <br>
+  <h1 class="orgo-h1">Search for...</h1>
     <input class="recipe-search" type="text" v-model="name" name="name" placeholder="recipes...">
   <br>
   <br>
-  <b-button pill variant="info">Find me a recipe</b-button>
+  <b-button class="orgo-form-btn">Find me a recipe</b-button>
   <br>
   <br>
     <div class="card">
