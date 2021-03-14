@@ -1,6 +1,6 @@
 <template>
 <div class="recipe-search">
-  <h1>Search for...</h1>
+  <h1 id="recipe-h1">Search for...</h1>
   <br>
   <br>
     <input class="recipe-search" type="text" v-model="name" name="name" placeholder="recipes...">

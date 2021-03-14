@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-modal class="modal-scoped">
+    <b-modal class=" calendar-modal">
       <template #modal-header="{ close }">
         <!-- Emulate built in modal header close button action -->
         <b-button size="sm" variant="outline-danger" @click="close()">

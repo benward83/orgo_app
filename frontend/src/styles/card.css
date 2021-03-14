@@ -1,0 +1,62 @@
+.card .card-body {
+  color: #cec6c6;
+  border-radius: 18px 18px 18px 18px;
+}
+
+.card-deck {
+  margin-bottom: 30px;
+}
+
+.card-title {
+  color: black;
+  text-decoration-color: black;
+
+}
+
+.card-text {
+  color: black;
+  text-decoration-color: black;
+
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.link {
+  color: black;
+}
+.link:hover {
+   color: #2980b9
+}
+
+
+
+
+/* Calendar Card */
+
+.calendar-card-img-top {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+
+.calendar-week-text {
+  color: black;
+  text-decoration-color: black;
+
+  }
+
+  .calendar-card-body {
+    background-color: whitesmoke;
+    background: linear-gradient(180deg, rgba(240,235,223,1) 30%
+    rgba(78,78,78,0.7105217086834734) 100%);
+  }
+
+  .calendar-modal {
+    border-radius: 15px 15px 15px 15px;;
+  }
+
+

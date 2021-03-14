@@ -1,6 +1,6 @@
 <template>
   <div class="shopping">
-    <div id="container">
+    <div id="shopping-container">
       <h1>Shopping List <span id="toggle-form">
           <i class="fa fa-plus" ></i></span>
         </h1>
