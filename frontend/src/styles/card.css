@@ -51,16 +51,17 @@
   }
 
   .calendar-card-body {
-    border-style: solid;
-    border-color: #6F0055;
-    color: whitesmoke ;
     background-color: whitesmoke;
-    background: linear-gradient(180deg, rgba(240,235,223,1) 30%
-    rgba(78,78,78,0.7105217086834734) 100%);
+    border: 1px solid;
+    border-color: #6F0055;
   }
 
   .calendar-modal {
     border-radius: 15px 15px 15px 15px;;
   }
 
+  /* Recipe card */
 
+.recipe-card {
+  margin-top: 5%;
+}
