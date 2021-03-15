@@ -3,7 +3,7 @@
   z-index: 100;
   position: fixed;
   width: 100%;
-  color: slategrey;
+  color: whitesmoke;
   border-bottom: 1px solid #6F0055;
 }
 
@@ -20,3 +20,4 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+

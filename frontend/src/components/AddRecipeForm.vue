@@ -1,6 +1,6 @@
 <template>
-  <div id="form-container">
-    <div>
+  <div class="add-recipe-form-container">
+    <div class="recipe-form-container mt-3">
       <form @submit.prevent="submit" class="form-control" action="submit">
         <h2 class="form-title">Add a recipe</h2>
 
@@ -9,29 +9,29 @@
         <div class="form-input">
           <b-form-input
             class="mt-2"
-            v-model.trim="artist"
-            placeholder="Artist"
+            v-model.trim="name"
+            placeholder="Recipe name"
           ></b-form-input>
         </div>
         <div class="form-input">
           <b-form-input
             class="mt-2"
-            v-model.trim="album"
-            placeholder="Album name"
+            v-model.trim="type"
+            placeholder="Dish type"
           ></b-form-input>
         </div>
         <div class="form-input">
           <b-form-input
             class="mt-2"
-            v-model.trim="track"
-            placeholder="Track name"
+            v-model.trim="time"
+            placeholder="Preperation time"
           ></b-form-input>
         </div>
         <div class="form-input">
           <b-form-input
             class="mt-2"
-            v-model.trim="recordLabel"
-            placeholder="Record label"
+            v-model.trim="servings"
+            placeholder="No. of servings"
           ></b-form-input>
         </div>
 
@@ -49,7 +49,7 @@
           <b-button @click="$router.push('/')" class="cancel" variant="danger"
             >Cancel</b-button
           >
-          <b-button class="orgo-form-btn" variant="success">Submit</b-button>
+          <b-button class="submit" variant="success">Submit</b-button>
         </div>
       </form>
     </div>

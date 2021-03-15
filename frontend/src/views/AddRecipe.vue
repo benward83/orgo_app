@@ -1,6 +1,5 @@
 <template>
-  <div id="add-recipe">
-    <Navbar />
+  <div id="add-recipe-view">
     <RecipeHeader />
     <br>
     <AddRecipeForm />
@@ -9,14 +8,12 @@
 
 <script>
 
-import Navbar from '@/components/Navbar.vue';
 import AddRecipeForm from '@/components/AddRecipeForm.vue';
 import RecipeHeader from '@/components/RecipeHeader.vue';
 
 export default {
   name: 'add-recipe',
   components: {
-    Navbar,
     AddRecipeForm,
     RecipeHeader,
   },

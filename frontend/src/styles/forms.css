@@ -12,3 +12,30 @@
   margin: auto;
   width: 70%;
   }
+
+  /* Add Recipe */
+
+  .form-control {
+    display: inline-block;
+    margin: auto auto;
+    background-color: white;
+  }
+
+  .form-title {
+    text-align: center;
+    color: #6F0055;
+    padding: 10px 10px
+  }
+  .form-text {
+    color: black
+  }
+
+  .cancel {
+    float: left;
+    margin-right: 15px;
+  }
+
+  .submit {
+    float: right;
+    margin-left: 15px;
+  }

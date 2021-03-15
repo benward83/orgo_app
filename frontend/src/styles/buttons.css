@@ -8,3 +8,11 @@
   color: whitesmoke;
   margin-bottom: 3%
 }
+
+
+/* Add Recipe */
+
+.form-btns {
+  padding: 10px 10px;
+  display: inline-block;
+}
