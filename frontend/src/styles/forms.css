@@ -16,6 +16,7 @@
   /* Add Recipe */
 
   .recipe-form-control {
+    width: 80%;
     display: inline-block;
     margin: auto auto;
     background-color: whitesmoke;
