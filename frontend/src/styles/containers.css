@@ -23,16 +23,33 @@
   border-color: 3px solid #6F0055
 }
 
-.add-recipe-form-container {
+/* Recipes */
+
+.add-recipe-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/recipe-image-min.jpg');
+  background-position: 50% 55%;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.recipe-form-container {
+  background-color: whitesmoke;
   display: block;
   text-align: center;
   justify-content: center;
   border-radius: 20px 20px 20px 20px;
-  background-position: 50% 55%;
-  max-width: 80%;
-  padding-top: 5%;
+  max-width: 40%;
+  margin-top: 5%;
+  margin-left: 25%;
+  padding-top: 10px;
 }
 
-.recipe-form-container {
-  margin-left: 25%;
+.recipe-form-tags {
+  margin: auto;
+  padding-top: 2%;
 }

@@ -15,10 +15,10 @@
 
   /* Add Recipe */
 
-  .form-control {
+  .recipe-form-control {
     display: inline-block;
     margin: auto auto;
-    background-color: white;
+    background-color: whitesmoke;
   }
 
   .form-title {
