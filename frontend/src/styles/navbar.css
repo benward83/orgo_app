@@ -7,6 +7,10 @@
   border-bottom: 1px solid #6F0055;
 }
 
+.navbar-nav {
+  color: whitesmoke;
+}
+
 
 #nav {
   padding: 30px;
@@ -15,9 +19,5 @@
 #nav a {
   font-weight: bold;
   color: #6F0055;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 

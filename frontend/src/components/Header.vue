@@ -3,7 +3,7 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="jumboContainer">
         <h1 class="jumboHeaderText display-4">Julia's Orgo App</h1>
-        <p class="lead">The go to app for planning and executing a tasty meal</p>
+        <h6 class="lead">The go to app for planning and executing a tasty meal</h6>
       </div>
     </div>
   </div>

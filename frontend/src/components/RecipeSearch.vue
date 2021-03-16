@@ -1,26 +1,24 @@
 <template>
-<div class="recipe-search">
-  <h1 class="orgo-h1">Search for...</h1>
-    <input
-      class="recipe-search"
-      type="text"
-      v-model="name"
-      name="name"
-      placeholder="recipes...">
-  <br>
-  <br>
-  <b-button
-    class="orgo-form-btn"
-  >Find me a recipe
-  </b-button>
-    <div class="recipe-card">
-    <ul>
-      <li v-for="recipe in matchingRepices" :key="recipe.id"><span
-      >
-      </span>{{ recipe.name }}</li>
-    </ul>
-    </div>
-</div>
+  <div class="recipe-search">
+    <h1 class="orgo-h1">Search for...</h1>
+      <input
+        class="recipe-search"
+        type="text"
+        v-model="name"
+        name="name"
+        placeholder="recipes...">
+    <b-button
+      class="orgo-form-btn"
+    >Find me a recipe
+    </b-button>
+      <div class="recipe-card">
+        <ul>
+          <li v-for="recipe in matchingRepices" :key="recipe.id"><span
+          >
+          </span>{{ recipe.name }}</li>
+        </ul>
+      </div>
+  </div>
 </template>
 
 <script>

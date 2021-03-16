@@ -6,9 +6,11 @@
   border-color: 3px solid #6F0055
 }
 
+/* Home */
+
 .jumboContainer .jumboHeaderText {
   max-width: 2500px;
-  border-radius: 18px 18px 18px 18px;
+  border-radius: 10px 10px 10px 10px;
   display: block;
   margin: auto;
   width: 50%;
