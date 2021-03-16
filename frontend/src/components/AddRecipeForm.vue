@@ -28,15 +28,6 @@
           ></b-form-input>
         </div>
 
-            <!-- Dropdown -->
-
-        <div class="form-dropdown mt-3">
-          <b-form-select v-model="meatSelected" :meatOptions="meatOptions"></b-form-select>
-        </div>
-        <div class="form-dropdown mt-3">
-          <b-form-select v-model="fishSelected" :fishOptions="fishOptions"></b-form-select>
-        </div>
-
           <!-- Tags -->
 
         <div class="recipe-form-tags">
@@ -46,7 +37,7 @@
 
         <!-- Text area -->
         <div>
-          <h6>Please list the ingredients</h6>
+          <h6>Ingredients</h6>
             <b-form-textarea
               id="ingredient-textarea"
               v-model="ingredients"
@@ -57,7 +48,7 @@
         </div>
 
         <div>
-          <h6>Please leave a description of the recipe</h6>
+          <h6>Method</h6>
             <b-form-textarea
               id="description-textarea"
               v-model="description"
@@ -98,20 +89,6 @@ export default {
       tags: [],
       ingredients: '',
       description: '',
-      meatSelected: null,
-      meatOptions: [
-        { value: null, text: 'Please select cut of meat' },
-        { value: 'a', text: 'This is First option' },
-        { value: 'b', text: 'Selected Option' },
-        { value: { C: '3PO' }, text: 'This is an option with object value' },
-      ],
-      fishSelected: null,
-      fishOptions: [
-        { value: null, text: 'Please select type of fish' },
-        { value: 'a', text: 'This is First option' },
-        { value: 'b', text: 'Selected Option' },
-        { value: { C: '3PO' }, text: 'This is an option with object value' },
-      ],
       recipeRating: '',
     };
   },
